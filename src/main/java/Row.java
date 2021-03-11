@@ -40,6 +40,7 @@ public class Row extends Composition {
     public void adjustParent(Bounds bounds){
         getBounds().setHeight(bounds.getHeight());
         getBounds().setWidth(bounds.getWidth());
+
     }
 
 }

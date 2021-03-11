@@ -1,5 +1,6 @@
 public class Border extends Embellishment {
 
+
     private int width;
 
     public Border(int width, Compositor compositor) {
@@ -14,7 +15,7 @@ public class Border extends Embellishment {
             child.draw(window);
         }
         window.addBorder(getBounds().getPoint().x, getBounds().getPoint().y,
-                getBounds().getWidth(), getBounds().getHeight() + getBounds().getPoint().y, width);
+                getBounds().getWidth()+getBounds().getPoint().x, getBounds().getHeight() + getBounds().getPoint().y, width);
 
     }
 
@@ -23,11 +24,13 @@ public class Border extends Embellishment {
         cursor.setHeight(Math.max(cursor.getHeight(), glyph.getBounds().getHeight()));
         cursor.setWidth(cursor.getWidth() + glyph.getBounds().getWidth());
 
+
     }
 
     public void adjustParent(Bounds bounds) {
-        getBounds().setHeight(bounds.getHeight());
-        getBounds().setWidth(bounds.getWidth());
+        getBounds().setHeight(bounds.getHeight()+width);
+        getBounds().setWidth(bounds.getWidth()+width);
+
     }
 
 }

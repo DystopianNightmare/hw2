@@ -1,35 +1,22 @@
+import javax.swing.*;
+
 public class main {
 
     public static void main(String[] args) throws NullChildException, NoChildOperationsException {
         SwingWindow swingWindow = new SwingWindow("TEST");
         Column main = new Column(new SimpleCompositor(swingWindow));
-//        Column col = new Column(new SimpleCompositor(swingWindow));
-//        Border border= new Border(1,new SimpleCompositor(swingWindow));
-//        Row row1 = new Row("11111111",new SimpleCompositor(swingWindow));
-//        Row row2 = new Row("22222222",new SimpleCompositor(swingWindow));
-//        Row row3 = new Row("33333333",new SimpleCompositor(swingWindow));
-////        Border border2= new Border(1,new SimpleCompositor(swingWindow));
-////        Border border3= new Border(1,new SimpleCompositor(swingWindow));
-//
-//        Scrollbar scrollbar = new Scrollbar(new SimpleCompositor(swingWindow));
-//
-////        scrollbar.insert(row1,0);
-//        col.insert(row1,0);
-//        col.insert(row2,1);
-//        col.insert(row3,2);
-//        border.insert(col,0);
-//        main.insert(border,0);
-//        swingWindow.setContents(main);
+        Column col = new Column(new SimpleCompositor(swingWindow));
+        Border border= new Border(1,new SimpleCompositor(swingWindow));
+        Row row1 = new Row("This is a",new SimpleCompositor(swingWindow));
+        Row row2 = new Row("border demonstration.",new SimpleCompositor(swingWindow));
+        Row row3 = new Row("scroller too!",new SimpleCompositor(swingWindow));
 
+        Scrollbar scrollbar = new Scrollbar(new SimpleCompositor(swingWindow));
 
-//                Column main = new Column(new SimpleCompositor(swingWindow));
         Column column1 = new Column(new SimpleCompositor(swingWindow));
         Row topRow = new Row(new SimpleCompositor(swingWindow));
         Row bottomRow = new Row(new SimpleCompositor(swingWindow));
 
-        Row row1 = new Row("row1",new SimpleCompositor(swingWindow));
-        Row row2 = new Row("row2",new SimpleCompositor(swingWindow));
-        Row row3 = new Row("row3",new SimpleCompositor(swingWindow));
 
         main.insert(topRow,0);
         main.insert(bottomRow,1);
@@ -41,16 +28,18 @@ public class main {
 
         topRow.insert(column1,2);
 
-        Character X = new Character('X');
-        column1.insert(X, 0);
-        Character Y = new Character('Y');
-        column1.insert(Y,1);
-        Character Z = new Character('Z');
-        column1.insert(Z,2);
+        col.insert(row1,0);
+        col.insert(row2,1);
+        col.insert(row3,2);
 
-        Character b = new Character('b');
-        topRow.insert(b, 3);
-    topRow.insert(row1,4);
+//        scrollbar.insert(col,0);
+//        border.insert(scrollbar,0);
+//        topRow.insert(border,3);
+        border.insert(col,0);
+        scrollbar.insert(border,0);
+        topRow.insert(scrollbar,3);
+        Character B = new Character('B');
+        topRow.insert(B,4);
 
         Character x = new Character('x');
         bottomRow.insert(x, 0);
@@ -58,8 +47,7 @@ public class main {
         bottomRow.insert(rectangle1,1);
         Character y = new Character('y');
         bottomRow.insert(y, 2);
-        main.insert(row2,2);
-        main.insert(row3,3);
+
         swingWindow.setContents(main);
     }
 }
