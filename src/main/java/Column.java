@@ -28,7 +28,7 @@ public class Column extends Composition {
     public void updateCursor(Bounds cursor, Glyph glyph) {
         cursor.setY(glyph.getBounds().getHeight()+cursor.getPoint().y);
         cursor.setHeight(cursor.getHeight()+glyph.getBounds().getHeight());
-        cursor.setWidth(Math.min(cursor.getPoint().x, glyph.getBounds().getWidth()));
+        cursor.setWidth(Math.max(cursor.getWidth(), glyph.getBounds().getWidth()));
     }
 
     public void adjustParent(Bounds bounds){

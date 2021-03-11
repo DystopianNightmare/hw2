@@ -1,10 +1,8 @@
-public class Border extends Embellishment {
+public class Scrollbar extends Embellishment {
 
-    private int width;
 
-    public Border(int width, Compositor compositor) {
+    public Scrollbar(Compositor compositor) {
         super(compositor);
-        this.width = width;
     }
 
 
@@ -13,8 +11,8 @@ public class Border extends Embellishment {
         for (Glyph child : children) {
             child.draw(window);
         }
-        window.addBorder(getBounds().getPoint().x, getBounds().getPoint().y,
-                getBounds().getWidth(), getBounds().getHeight() + getBounds().getPoint().y, width);
+        window.addScrollBar(getBounds().getPoint().x, getBounds().getPoint().y,
+                15, getBounds().getHeight() + getBounds().getPoint().y);
 
     }
 
@@ -22,7 +20,6 @@ public class Border extends Embellishment {
         cursor.setX(glyph.getBounds().getWidth() + cursor.getPoint().x);
         cursor.setHeight(Math.max(cursor.getHeight(), glyph.getBounds().getHeight()));
         cursor.setWidth(cursor.getWidth() + glyph.getBounds().getWidth());
-
     }
 
     public void adjustParent(Bounds bounds) {
