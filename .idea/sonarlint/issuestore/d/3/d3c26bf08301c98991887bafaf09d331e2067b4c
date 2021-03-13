@@ -1,0 +1,18 @@
+
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(·š†‡8àôéõ/
+i
+java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(ĞÓ®Ô8àôéõ/
+]	java:S125r"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8Äˆôõ/
+r	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ¨¸×ÿÿÿÿÿ8ÍÙ•ü/
+X	java:S125]"<This block of commented-out lines of code should be removed.(áÕ‹é8àôéõ/
+X	java:S125h"<This block of commented-out lines of code should be removed.(ù±éè8àôéõ/
+X	java:S125V"<This block of commented-out lines of code should be removed.(Æü¹8àôéõ/
+]	java:S1258"<This block of commented-out lines of code should be removed.( ììÙÿÿÿÿÿ8³­³ø/
+X	java:S125["<This block of commented-out lines of code should be removed.(ÉÖ³À8àôéõ/
+]	java:S125d"<This block of commented-out lines of code should be removed.(¿¾’Æøÿÿÿÿ8àôéõ/
+]	java:S125S"<This block of commented-out lines of code should be removed.(¢”ß‹úÿÿÿÿ8àôéõ/
+
+java:S1130"sRemove the declaration of thrown exception 'NoChildOperationsException', as it cannot be thrown from method's body.(ĞÓ®Ô8Ãô†ı/
+]	java:S125I"<This block of commented-out lines of code should be removed.(úñû“şÿÿÿÿ8àôéõ/
+X	java:S125O"<This block of commented-out lines of code should be removed.(ÙğÇ´8àôéõ/
+]	java:S125&"<This block of commented-out lines of code should be removed.(™ç©Šüÿÿÿÿ8½¸ÿ/

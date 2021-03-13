@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public class Border extends Embellishment {
 
 
@@ -28,9 +30,25 @@ public class Border extends Embellishment {
     }
 
     public void adjustParent(Bounds bounds) {
-        getBounds().setHeight(bounds.getHeight()+width);
-        getBounds().setWidth(bounds.getWidth()+width);
+        getBounds().setHeight(bounds.getHeight()+width*2);
+        getBounds().setWidth(bounds.getWidth()+width*2);
 
     }
 
+    @Override
+    public void compose(){
+        Bounds cursor = new Bounds(this.compositor.composition);
+
+        for (int i = 0; i < this.compositor.composition.getChildren().size(); i++) {
+            try {
+                Glyph child = this.compositor.composition.child(i);
+//                child.setSize(this.);
+                child.getBounds().setPoint(new Point(cursor.getPoint().x+width, cursor.getPoint().y+width));
+                child.compose();
+                this.compositor.composition.updateCursor(cursor, child);
+            } catch (NullChildException e) {
+            }
+        }
+        this.compositor.composition.adjustParent(cursor);
+    }
 }

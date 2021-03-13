@@ -32,4 +32,6 @@ private int thickness;
         getBounds().setWidth(bounds.getWidth()+thickness);
     }
 
+
+
 }

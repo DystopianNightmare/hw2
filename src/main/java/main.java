@@ -6,7 +6,7 @@ public class main {
         SwingWindow swingWindow = new SwingWindow("TEST");
         Column main = new Column(new SimpleCompositor(swingWindow));
         Column col = new Column(new SimpleCompositor(swingWindow));
-        Border border= new Border(1,new SimpleCompositor(swingWindow));
+        Border border= new Border(5,new SimpleCompositor(swingWindow));
         Row row1 = new Row("This is a",new SimpleCompositor(swingWindow));
         Row row2 = new Row("border demonstration.",new SimpleCompositor(swingWindow));
         Row row3 = new Row("scroller too!",new SimpleCompositor(swingWindow));
