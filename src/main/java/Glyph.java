@@ -4,13 +4,9 @@ abstract class Glyph {
     private Bounds bounds = new Bounds(new Point(0, 0), 0, 0);
     private Glyph parent = null;
 
-
     private Window window;
 
-
-    public void compose() {
-    }
-
+    public void compose() { }
 
     public void adjustParent(Bounds bounds) {
     }
@@ -22,7 +18,7 @@ abstract class Glyph {
         return false;
     }
 
-    void insert(Glyph glyph, int position) throws NoChildOperationsException, NullChildException {
+    void insert(Glyph glyph, int position) throws NoChildOperationsException {
         throw new NoChildOperationsException();
     }
 
@@ -51,6 +47,5 @@ abstract class Glyph {
 
     public String toString() {
         return bounds.getPoint().x + " " + bounds.getPoint().y + " " + bounds.getHeight() + " " + bounds.getWidth();
-
     }
 }

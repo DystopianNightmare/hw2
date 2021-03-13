@@ -21,10 +21,6 @@ public class Column extends Composition {
         }
     }
 
-    Glyph child(int position) {
-        return children.get(position);
-    }
-
     public void updateCursor(Bounds cursor, Glyph glyph) {
         cursor.setY(glyph.getBounds().getHeight()+cursor.getPoint().y);
         cursor.setHeight(cursor.getHeight()+glyph.getBounds().getHeight());

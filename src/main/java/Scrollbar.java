@@ -2,14 +2,10 @@ public class Scrollbar extends Embellishment {
 
 private int thickness;
 
-
-
     public Scrollbar(Compositor compositor) {
         super(compositor);
         thickness = 10;
-
     }
-
 
     @Override
     void draw(Window window) {
@@ -31,7 +27,4 @@ private int thickness;
         getBounds().setHeight(bounds.getHeight());
         getBounds().setWidth(bounds.getWidth()+thickness);
     }
-
-
-
 }

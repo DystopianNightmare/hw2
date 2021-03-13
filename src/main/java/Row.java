@@ -1,5 +1,3 @@
-import java.awt.*;
-
 public class Row extends Composition {
 
     public Row(Compositor compositor) {
@@ -22,19 +20,10 @@ public class Row extends Composition {
         }
     }
 
-    Glyph child(int position) {
-        return children.get(position);
-    }
-
-
-
-
-
     public void updateCursor(Bounds cursor, Glyph glyph) {
     cursor.setX(glyph.getBounds().getWidth()+cursor.getPoint().x);
      cursor.setHeight(Math.max(cursor.getHeight(),glyph.getBounds().getHeight()));
      cursor.setWidth(cursor.getWidth()+glyph.getBounds().getWidth());
-
     }
 
     public void adjustParent(Bounds bounds){
