@@ -1,22 +1,34 @@
 package factory;
 
-import factory.Button;
-import glyph.Bounds;
-import glyph.Glyph;
-import glyph.SimpleCompositor;
+import glyph.*;
 import window.Window;
 
  class RedButton extends Button {
 
-     String testy = "test";
-     RedButton(){
+     RedButton(Compositor compositor, Glyph g) throws NoChildOperationsException {
+         super(compositor);
+         insert(g, 0);
+     }
 
-         // draw button?
+     public void draw(Window window) {
+         window.drawButton(getBounds().getPoint().x, getBounds().getPoint().y,getBounds().getWidth(),
+                 getBounds().getHeight() ,"red");
+         super.draw(window);
+     }
 
-    }
+     public void updateCursor(Bounds cursor, Glyph glyph) {
+         cursor.setX(glyph.getBounds().getWidth() + cursor.getPoint().x);
+         cursor.setHeight(Math.max(cursor.getHeight(), glyph.getBounds().getHeight()));
+         cursor.setWidth(cursor.getWidth() + glyph.getBounds().getWidth());
+     }
 
+     public void adjustParent(Bounds bounds) {
+         getBounds().setHeight(bounds.getHeight());
+         getBounds().setWidth(bounds.getWidth());
+     }
 
-    public void draw(Window window) {
-        window.drawButton(getBounds().getPoint().x, getBounds().getPoint().y,20,20,"red");
-    }
+     @Override
+     public void insert(Glyph glyph, int position) throws NoChildOperationsException {
+         children.add(0,glyph);
+     }
 }

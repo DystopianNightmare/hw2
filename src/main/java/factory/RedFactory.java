@@ -2,6 +2,7 @@ package factory;
 
 import glyph.Compositor;
 import glyph.Glyph;
+import glyph.NoChildOperationsException;
 import glyph.SimpleCompositor;
 import window.Window;
 
@@ -20,12 +21,11 @@ import window.Window;
         return redFactory;
     }
 
-    public Button getButton() {
-        return new RedButton();
+    public Button getButton(Compositor compositor, Glyph g) throws NoChildOperationsException {
+        return new RedButton(compositor, g);
     }
-     public Label getLabel(Compositor compositor){
-
-         return new RedLabel(compositor);
+     public Label getLabel(Compositor compositor, Glyph g) throws NoChildOperationsException {
+         return new RedLabel(compositor, g);
      }
 
 }

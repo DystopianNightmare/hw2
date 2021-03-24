@@ -1,6 +1,5 @@
 package factory;
-import glyph.CompositeGlyph;
-import glyph.CompositeGlyph;
+
 import glyph.Compositor;
 import glyph.Embellishment;
 

@@ -1,7 +1,7 @@
 package factory;
 
 import glyph.Compositor;
-import glyph.SimpleCompositor;
+import glyph.*;
 
 public abstract class WidgetFactory {
 
@@ -11,7 +11,7 @@ public abstract class WidgetFactory {
 
      public static WidgetFactory getInstance() {
 
-          String type = System.getenv("LexiWidget");
+          String type = System.getenv("LexiWidget2");
           if(factory != null){
                return factory;
           }
@@ -24,13 +24,12 @@ public abstract class WidgetFactory {
           return factory;
      }
 
-     public Button getButton() {
-          return factory.getButton();
+     public Button getButton(Compositor compositor, Glyph g) throws NoChildOperationsException {
+          return factory.getButton(compositor, g);
 
      }
 
-     public Label getLabel(Compositor compositor) {
-
-          return factory.getLabel(compositor);
+     public Label getLabel(Compositor compositor, Glyph g) throws NoChildOperationsException {
+          return factory.getLabel(compositor, g);
      }
 }

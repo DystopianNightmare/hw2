@@ -9,8 +9,8 @@ public class main {
         SwingWindow swingWindow = new SwingWindow("TEST");
 
         WidgetFactory widgetFactory = WidgetFactory.getInstance();
-        Button button = widgetFactory.getButton();
-        Label label = widgetFactory.getLabel(new SimpleCompositor(swingWindow));
+//        Button button = widgetFactory.getButton();
+//        Label label = widgetFactory.getLabel(new SimpleCompositor(swingWindow));
 
 
         String t = System.getenv("LexiWidget");
@@ -30,13 +30,22 @@ public class main {
         Row bottomRow = new Row(new SimpleCompositor(swingWindow));
 
 
-        main.insert(topRow,0);
-        main.insert(bottomRow,1);
-        bottomRow.insert(label, 0);      // add button here _______________-------~~~~~~~
-//        bottomRow.insert(button, 1);
-        glyph.Character Q = new glyph.Character('Q');
 
-        label.insert(Q,0);
+
+        glyph.Character Q = new glyph.Character('Q');
+        glyph.Character R = new glyph.Character('R');
+        glyph.Character T = new glyph.Character('T');
+        bottomRow.insert(Q, 0);      // add button here _______________-------~~~~~~~
+        bottomRow.insert(R, 1);
+        bottomRow.insert(T, 2);
+        Label label = widgetFactory.getLabel(new SimpleCompositor(swingWindow),bottomRow);
+        Button button = widgetFactory.getButton(new SimpleCompositor(swingWindow), topRow);
+
+//        bottomRow.insert(button, 1);
+
+
+
+//        label.insert(Q,0);
 //        glyph.Character M = new glyph.Character('M');
 //        button.insert(M,0);
 
@@ -79,7 +88,8 @@ public class main {
 //        topRow.remove(B);
 //        scrollbar.remove(col);
 //        topRow.remove(border);
-
+        main.insert(label,0);
+        main.insert(button,1);
         swingWindow.setContents(main);
     }
 }
