@@ -1,0 +1,11 @@
+
+W
+java:S1191"5Use classes from the Java API instead of Sun classes.(·Ú¼òúÿÿÿÿ8ÃÓ¼—†/
+R
+java:S1128"0Remove this unused import 'glyph.Embellishment'.(˜±ß…ÿÿÿÿÿ8ÀƒÒ—†/
+_
+java:S2094"BRemove this empty class, write its code or make it an "interface".(ÍÜÅÌ8Ó–Ó—†/
+G
+java:S1128"*Remove this unused import 'window.Window'.(àãÉè8Ó–Ó—†/
+X
+java:S1128"6Remove this unused import 'com.sun.javafx.font.Glyph'.(·Ú¼òúÿÿÿÿ8û ¾—†/

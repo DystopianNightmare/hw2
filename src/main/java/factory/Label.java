@@ -1,5 +1,14 @@
 package factory;
+import glyph.CompositeGlyph;
+import glyph.CompositeGlyph;
+import glyph.Compositor;
+import glyph.Embellishment;
 
-public interface Label {
+public abstract class Label extends Embellishment {
+
+    public Label(Compositor compositor) {
+        super(compositor);
+    }
+
 
 }

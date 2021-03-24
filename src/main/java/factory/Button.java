@@ -1,11 +1,13 @@
 package factory;
 
 
-import com.sun.javafx.font.Glyph;
+import glyph.CompositeGlyph;
+import glyph.Compositor;
 import glyph.Embellishment;
+import glyph.Glyph;
 import window.Window;
 
-public abstract class Button  {
+public abstract class Button extends CompositeGlyph {
 
 
 

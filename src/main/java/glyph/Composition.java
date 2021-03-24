@@ -9,7 +9,7 @@ public abstract class Composition extends CompositeGlyph {
         compositor.setComposition(this);
     }
 
-    abstract void updateCursor(Bounds cursor, Glyph glyph);
+    protected abstract void updateCursor(Bounds cursor, Glyph glyph);
 
     @Override
     public void compose() {

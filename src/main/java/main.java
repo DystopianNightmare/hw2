@@ -3,21 +3,19 @@ import glyph.*;
 import glyph.Character;
 import window.*;
 
-import java.util.Map;
-import java.util.Properties;
-
 public class main {
 
     public static void main(String[] args) throws NullChildException, NoChildOperationsException {
+        SwingWindow swingWindow = new SwingWindow("TEST");
 
         WidgetFactory widgetFactory = WidgetFactory.getInstance();
         Button button = widgetFactory.getButton();
-        Label label = widgetFactory.getLabel();
+        Label label = widgetFactory.getLabel(new SimpleCompositor(swingWindow));
 
 
         String t = System.getenv("LexiWidget");
 
-        SwingWindow swingWindow = new SwingWindow("TEST");
+
         Column main = new Column(new SimpleCompositor(swingWindow));
         Column col = new Column(new SimpleCompositor(swingWindow));
         Embellishment border;
@@ -34,6 +32,13 @@ public class main {
 
         main.insert(topRow,0);
         main.insert(bottomRow,1);
+        bottomRow.insert(label, 0);      // add button here _______________-------~~~~~~~
+//        bottomRow.insert(button, 1);
+        glyph.Character Q = new glyph.Character('Q');
+
+        label.insert(Q,0);
+//        glyph.Character M = new glyph.Character('M');
+//        button.insert(M,0);
 
         glyph.Character a = new glyph.Character('a');
         topRow.insert(a, 0);

@@ -1,5 +1,7 @@
 package factory;
 
+import glyph.Compositor;
+
 class GreenFactory extends WidgetFactory {
 
 
@@ -21,7 +23,7 @@ class GreenFactory extends WidgetFactory {
     public Button getButton() {
         return new GreenButton();
     }
-    public Label getLabel(){
+    public Label getLabel(Compositor compositor){
         return new GreenLabel();
     }
 }

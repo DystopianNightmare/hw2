@@ -42,7 +42,7 @@ public abstract class Glyph {
         this.parent = parent;
     }
 
-    Bounds getBounds() {
+    protected Bounds getBounds() {
         return bounds;
     }
 

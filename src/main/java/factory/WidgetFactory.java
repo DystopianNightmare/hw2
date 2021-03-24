@@ -1,6 +1,7 @@
 package factory;
 
-import glyph.Glyph;
+import glyph.Compositor;
+import glyph.SimpleCompositor;
 
 public abstract class WidgetFactory {
 
@@ -9,16 +10,17 @@ public abstract class WidgetFactory {
      WidgetFactory(){}
 
      public static WidgetFactory getInstance() {
+
           String type = System.getenv("LexiWidget");
           if(factory != null){
                return factory;
           }
           if(type.equalsIgnoreCase("RED")){
                factory =  RedFactory.getInstance();
+               return factory;
           }
-          if(type.equalsIgnoreCase("GREEN")){
-               factory =  GreenFactory.getInstance();
-          }
+
+          factory =  GreenFactory.getInstance();
           return factory;
      }
 
@@ -27,7 +29,8 @@ public abstract class WidgetFactory {
 
      }
 
-     public Label getLabel() {
-          return factory.getLabel();
+     public Label getLabel(Compositor compositor) {
+
+          return factory.getLabel(compositor);
      }
 }

@@ -45,9 +45,11 @@ W
 'src/main/java/factory/GreenFactory.java,f\3\f344e489540eb87a2b01409f47df196e131c9cb3
 P
  src/main/java/window/Window.java,4\f\4f66e3244faa6057d346d4b89f2482f74bcd5a4b
-Z
-*src/main/java/factory/FactoryProducer.java,d\4\d42ac4abda03a1b683dcb72c390a027cb59c9808
 P
  src/main/java/factory/Label.java,f\4\f4508a8eb97ac7c7a56a0d4dd916ca6e2d4a3f5c
-Z
-*src/main/java/factory/AbstractFactory.java,6\5\6519a03edc3a191b983cb4c2f4ca913f0bb9426d
+U
+%src/main/java/factory/GreenLabel.java,3\7\37ee89e43c89e3e38c4183dced67f9cebd67b254
+S
+#src/main/java/factory/RedLabel.java,2\2\228db390192cbd8eacd4086479e045d9196d1612
+V
+&src/main/java/factory/GreenButton.java,b\d\bde1c9bd195db1373231576f07da6fd2f1cbe716
