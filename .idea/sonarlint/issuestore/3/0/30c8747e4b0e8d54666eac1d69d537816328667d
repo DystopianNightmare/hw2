@@ -1,6 +1,4 @@
 
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ8«òòü/
 V
-java:S1161(":Add the "@Override" annotation above this method signature(ï†Õ~8«òòü/
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ8«òòü/
-W
-java:S1161":Add the "@Override" annotation above this method signature(ÙÜîÔ8«òòü/
+java:S1161":Add the "@Override" annotation above this method signature(ï†Õ~8«òòü/

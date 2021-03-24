@@ -3,16 +3,15 @@ public class Border extends Embellishment {
 
     private int width;
 
-    public Border(int width, Compositor compositor) {
+    public Border(int width, Compositor compositor, Glyph g) throws NoChildOperationsException {
         super(compositor);
         this.width = width;
+        children.add(0,g);
     }
 
     @Override
     void draw(Window window) {
-        for (Glyph child : children) {
-            child.draw(window);
-        }
+        super.draw(window);
         window.addBorder(getBounds().getPoint().x, getBounds().getPoint().y,
                 getBounds().getWidth()+getBounds().getPoint().x, getBounds().getHeight() + getBounds().getPoint().y, width);
     }
@@ -35,7 +34,7 @@ public class Border extends Embellishment {
         for (int i = 0; i < this.compositor.composition.getChildren().size(); i++) {
             try {
                 Glyph child = this.compositor.composition.child(i);
-//                child.setSize(this.);
+                child.setSize(window);
                 child.getBounds().setPoint(new Point(cursor.getPoint().x+width, cursor.getPoint().y+width));
                 child.compose();
                 this.compositor.composition.updateCursor(cursor, child);

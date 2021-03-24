@@ -4,7 +4,7 @@ abstract class Glyph {
     private Bounds bounds = new Bounds(new Point(0, 0), 0, 0);
     private Glyph parent = null;
 
-    private Window window;
+    protected Window window;
 
     public void compose() { }
 

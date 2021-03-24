@@ -13,7 +13,7 @@ public abstract class CompositeGlyph extends Glyph {
         return children.get(position);
     }
 
-    void insert(Glyph glyph, int position) {
+    void insert(Glyph glyph, int position) throws NoChildOperationsException {
         glyph.setParent(this);
         this.children.add(position, glyph);
         Glyph root = glyph;
@@ -23,7 +23,7 @@ public abstract class CompositeGlyph extends Glyph {
         root.compose();
     }
 
-    void remove(Glyph glyph) {
+    void remove(Glyph glyph) throws NoChildOperationsException {
         this.children.remove(glyph);
         Glyph root = glyph;
         while (root.getParent() != null) {
