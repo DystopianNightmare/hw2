@@ -1,3 +1,6 @@
+import glyph.*;
+import glyph.Character;
+import window.*;
 public class main {
 
     public static void main(String[] args) throws NullChildException, NoChildOperationsException {
@@ -19,7 +22,7 @@ public class main {
         main.insert(topRow,0);
         main.insert(bottomRow,1);
 
-        Character a = new Character('a');
+        glyph.Character a = new glyph.Character('a');
         topRow.insert(a, 0);
         Rectangle rectangle = new Rectangle(15,10);
         topRow.insert(rectangle,1);
@@ -36,22 +39,22 @@ public class main {
         scrollbar = new Scrollbar(new SimpleCompositor(swingWindow),border);
         topRow.insert(scrollbar,3);
 
-//        scrollbar = new Scrollbar(new SimpleCompositor(swingWindow),col);
-//        border = new Border(3,new SimpleCompositor(swingWindow), scrollbar);
+//        scrollbar = new glyph.Scrollbar(new glyph.SimpleCompositor(swingWindow),col);
+//        border = new glyph.Border(3,new glyph.SimpleCompositor(swingWindow), scrollbar);
 //        topRow.insert(border,3);
 
 //        topRow.insert(border,3);
 //        border.insert(col,0);
 //        scrollbar.insert(border,0);
 //        topRow.insert(scrollbar,3);
-        Character B = new Character('B');
+        glyph.Character B = new Character('B');
         topRow.insert(B,4);
 
-//        Character x = new Character('x');
+//        glyph.Character x = new glyph.Character('x');
 //        bottomRow.insert(x, 0);
-//        Rectangle rectangle1 = new Rectangle(10,15);
+//        glyph.Rectangle rectangle1 = new glyph.Rectangle(10,15);
 //        bottomRow.insert(rectangle1,1);
-//        Character y = new Character('y');
+//        glyph.Character y = new glyph.Character('y');
 //        bottomRow.insert(y, 2);
 //        topRow.remove(B);
 //        scrollbar.remove(col);
