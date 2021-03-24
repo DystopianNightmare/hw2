@@ -1,9 +1,18 @@
 import glyph.*;
 import glyph.Character;
 import window.*;
+
+import java.util.Map;
+import java.util.Properties;
+
 public class main {
 
     public static void main(String[] args) throws NullChildException, NoChildOperationsException {
+
+
+
+String t = System.getenv("LexiWidget");
+
         SwingWindow swingWindow = new SwingWindow("TEST");
         Column main = new Column(new SimpleCompositor(swingWindow));
         Column col = new Column(new SimpleCompositor(swingWindow));
@@ -37,7 +46,9 @@ public class main {
 //        border.insert(scrollbar,0);
         border = new Border(3,new SimpleCompositor(swingWindow), col);
         scrollbar = new Scrollbar(new SimpleCompositor(swingWindow),border);
-        topRow.insert(scrollbar,3);
+        Embellishment border1 = new Border(3,new SimpleCompositor(swingWindow), scrollbar);
+        Embellishment border2 = new Border(3,new SimpleCompositor(swingWindow), border1);
+        topRow.insert(border2,3);
 
 //        scrollbar = new glyph.Scrollbar(new glyph.SimpleCompositor(swingWindow),col);
 //        border = new glyph.Border(3,new glyph.SimpleCompositor(swingWindow), scrollbar);

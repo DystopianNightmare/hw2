@@ -1,0 +1,7 @@
+
+D	java:S108-")Either remove or fill this block of code.(ÛÇ8è–¦Õ…/
+ 
+java:S1130
+"~Remove the declaration of thrown exception 'glyph.NoChildOperationsException', as it cannot be thrown from constructor's body.(–—µŞüÿÿÿÿ8¯Ğ‘†/
+V
+java:S1161":Add the "@Override" annotation above this method signature(ï†Õ~8¯Ğ‘†/
