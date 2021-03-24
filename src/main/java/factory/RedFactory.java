@@ -1,16 +1,28 @@
 package factory;
 
 import glyph.Glyph;
+import window.Window;
 
-public class RedFactory implements WidgetFactory {
+ class RedFactory extends WidgetFactory {
 
 
-    public Glyph createButton() {
-//        factory.Button
-        return null;
+    private static RedFactory redFactory;
+    private RedFactory(){
+        super();
+    };
+
+    public static RedFactory getInstance() {
+        if(redFactory == null) {
+            redFactory = new RedFactory();
+        }
+        return redFactory;
     }
 
-    public Glyph createLabel() {
-        return null;
+    public Button getButton() {
+        return new RedButton();
     }
+     public Label getLabel(){
+         return new RedLabel();
+     }
+
 }

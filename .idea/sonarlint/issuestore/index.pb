@@ -45,5 +45,9 @@ W
 'src/main/java/factory/GreenFactory.java,f\3\f344e489540eb87a2b01409f47df196e131c9cb3
 P
  src/main/java/window/Window.java,4\f\4f66e3244faa6057d346d4b89f2482f74bcd5a4b
-N
-src/main/java/Environment.java,7\b\7b06cce7ac6995ac85fbf0f6d71c78148d56bfb0
+Z
+*src/main/java/factory/FactoryProducer.java,d\4\d42ac4abda03a1b683dcb72c390a027cb59c9808
+P
+ src/main/java/factory/Label.java,f\4\f4508a8eb97ac7c7a56a0d4dd916ca6e2d4a3f5c
+Z
+*src/main/java/factory/AbstractFactory.java,6\5\6519a03edc3a191b983cb4c2f4ca913f0bb9426d

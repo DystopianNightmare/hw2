@@ -2,18 +2,18 @@ package factory;
 
 import factory.Button;
 import glyph.Glyph;
+import window.Window;
 
-public class RedButton implements Button {
+ class RedButton extends Button {
 
-    public RedButton(){
+     String testy = "test";
+     RedButton(){
         // draw button?
+
     }
 
-    public Glyph createButton() {
-        return null;
-    }
 
-    public Glyph createLabel() {
-        return null;
+    public void draw(Window window) {
+        window.drawButton(10,10,20,20,"red");
     }
 }

@@ -1,3 +1,4 @@
+import factory.*;
 import glyph.*;
 import glyph.Character;
 import window.*;
@@ -9,9 +10,12 @@ public class main {
 
     public static void main(String[] args) throws NullChildException, NoChildOperationsException {
 
+        WidgetFactory widgetFactory = WidgetFactory.getInstance();
+        Button button = widgetFactory.getButton();
+        Label label = widgetFactory.getLabel();
 
 
-String t = System.getenv("LexiWidget");
+        String t = System.getenv("LexiWidget");
 
         SwingWindow swingWindow = new SwingWindow("TEST");
         Column main = new Column(new SimpleCompositor(swingWindow));

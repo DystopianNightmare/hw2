@@ -1,10 +1,12 @@
 package factory;
 
-import glyph.Glyph;
-import org.omg.CORBA.Environment;
 
-public interface  Button {
+import com.sun.javafx.font.Glyph;
+import glyph.Embellishment;
+import window.Window;
 
-    Glyph createButton();
-    Glyph createLabel();
+public abstract class Button  {
+
+
+
 }
