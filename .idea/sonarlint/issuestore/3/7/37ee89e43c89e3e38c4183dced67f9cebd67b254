@@ -1,9 +1,8 @@
 
+ 
+java:S1130"~Remove the declaration of thrown exception 'glyph.NoChildOperationsException', as it cannot be thrown from constructor's body.(Ãšäµøÿÿÿÿ8¬…à†/
 V
 java:S1161":Add the "@Override" annotation above this method signature(ï†Õ~8˜÷Ç³†/
-X	java:S110	"<This class has 6 parents which is greater than 5 authorized.(ßíŞ¦8„“’°†/
 \
-java:S1161":Add the "@Override" annotation above this method signature(÷ÿÏÅøÿÿÿÿ8˜÷Ç³†/
-X	java:S125#"<This block of commented-out lines of code should be removed.(µ±Ş•8œú­´†/
-›
-java:S1130"~Remove the declaration of thrown exception 'glyph.NoChildOperationsException', as it cannot be thrown from constructor's body.(Ôâ¨í8‚¥á´†/
+java:S1161":Add the "@Override" annotation above this method signature(÷ÿÏÅøÿÿÿÿ8˜÷Ç³†/
+X	java:S110	"<This class has 6 parents which is greater than 5 authorized.(ßíŞ¦8„“’°†/

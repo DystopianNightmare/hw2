@@ -14,7 +14,7 @@ public abstract class WidgetFactory {
 
      public static WidgetFactory getInstance() {
 
-          String type = System.getenv("LexiWidget2");
+          String type = System.getenv("LexiWidget");
           if(factory != null){
                return factory;
           }

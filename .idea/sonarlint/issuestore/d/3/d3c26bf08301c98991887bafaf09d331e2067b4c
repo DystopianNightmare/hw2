@@ -1,17 +1,14 @@
 
-C
-java:S1481"&Remove this unused "t" local variable.(»ÿİ®8ÉÜƒ–†/
-r	java:S117%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚íñÈıÿÿÿÿ8Û‚»³†/
-r	java:S117P"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×Ôˆ…ùÿÿÿÿ8ÍÙ•ü/
-X	java:S125@"<This block of commented-out lines of code should be removed.(¹½ï¤8’ìâê…/
-]	java:S125L"<This block of commented-out lines of code should be removed.(§‡×ûûÿÿÿÿ8ÃöŒì…/
-]	java:S125"<This block of commented-out lines of code should be removed.(ÜÿÈÜşÿÿÿÿ8Ööâ³†/
-X	java:S125,"<This block of commented-out lines of code should be removed.(­Àüú8¥œ—³†/
-m	java:S117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞŸá±8¸Ş”³†/
+X	java:S125P"<This block of commented-out lines of code should be removed.(½ï®¡8ÏÍâ†/
+X	java:S125M"<This block of commented-out lines of code should be removed.(£Èí¦8ÏÍâ†/
+X	java:S125V"<This block of commented-out lines of code should be removed.(ãµ±‰8ÏÍâ†/
+]	java:S1256"<This block of commented-out lines of code should be removed.(Ë”øçøÿÿÿÿ8ÏÍâ†/
+]	java:S1258"<This block of commented-out lines of code should be removed.(ÖÙâÊùÿÿÿÿ8ÏÍâ†/
+]	java:S125Z"<This block of commented-out lines of code should be removed.(ÖÇ¿Àùÿÿÿÿ8ÏÍâ†/
+X	java:S125`"<This block of commented-out lines of code should be removed.(É»”8ÏÍâ†/
 i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(·š†‡8àôéõ/
-]	java:S1251"<This block of commented-out lines of code should be removed.(¿¹§îúÿÿÿÿ8¶’‘³†/
+X	java:S125B"<This block of commented-out lines of code should be removed.(ÑôéŠ8ÏÍâ†/
+W	java:S125>"<This block of commented-out lines of code should be removed.(–‹áx8ÏÍâ†/
+]	java:S125I"<This block of commented-out lines of code should be removed.(ú˜Ğ—ûÿÿÿÿ8ÏÍâ†/
 i
 java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(ĞÓ®Ô8àôéõ/
-r	java:S117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤œÀÏüÿÿÿÿ8’ã•³†/
-]	java:S125H"<This block of commented-out lines of code should be removed.(Øªèëøÿÿÿÿ8ºàÍ‘†/
-X	java:S125S"<This block of commented-out lines of code should be removed.(ÏÁòÆ8’™âê…/
