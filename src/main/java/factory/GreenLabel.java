@@ -8,9 +8,10 @@ import window.Window;
 
 class GreenLabel extends Label {
 
-    GreenLabel(Compositor compositor, Glyph g) throws NoChildOperationsException {
+    GreenLabel(Compositor compositor, Glyph glyph) throws NoChildOperationsException {
         super(compositor);
-        children.add(0,g);
+        this.children.add(0,glyph);
+    glyph.setParent(this);
     }
 
     public void draw(Window window) {

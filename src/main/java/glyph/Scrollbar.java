@@ -4,10 +4,11 @@ public class Scrollbar extends Embellishment {
 
 private int thickness;
 
-    public Scrollbar(Compositor compositor, Glyph g) throws NoChildOperationsException {
+    public Scrollbar(Compositor compositor, Glyph glyph) throws NoChildOperationsException {
         super(compositor);
         thickness = 10;
-        children.add(0,g);
+        children.add(0,glyph);
+        glyph.setParent(this);
     }
 
     @Override

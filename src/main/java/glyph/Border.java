@@ -7,10 +7,11 @@ public class Border extends Embellishment {
 
     private int width;
 
-    public Border(int width, Compositor compositor, Glyph g) throws NoChildOperationsException {
+    public Border(int width, Compositor compositor, Glyph glyph) throws NoChildOperationsException {
         super(compositor);
         this.width = width;
-        children.add(0,g);
+        children.add(0,glyph);
+        glyph.setParent(this);
     }
 
     @Override
@@ -18,6 +19,7 @@ public class Border extends Embellishment {
         super.draw(window);
         window.addBorder(getBounds().getPoint().x, getBounds().getPoint().y,
                 getBounds().getWidth()+getBounds().getPoint().x, getBounds().getHeight() + getBounds().getPoint().y, width);
+        super.draw(window);
     }
 
     public void updateCursor(Bounds cursor, Glyph glyph) {

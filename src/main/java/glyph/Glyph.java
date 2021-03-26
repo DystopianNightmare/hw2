@@ -38,7 +38,7 @@ public abstract class Glyph {
         return parent;
     }
 
-    void setParent(Glyph parent) {
+    public void setParent(Glyph parent) {
         this.parent = parent;
     }
 

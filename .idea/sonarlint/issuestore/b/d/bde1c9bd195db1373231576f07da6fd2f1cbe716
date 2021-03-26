@@ -1,3 +1,8 @@
 
-£
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷ÿÏÅøÿÿÿÿ8…“™—†/
+X	java:S110	"<This class has 6 parents which is greater than 5 authorized.(ïÀ8ùøå³†/
+V
+java:S1161":Add the "@Override" annotation above this method signature(ï†Õ~8’ìç³†/
+\
+java:S1161":Add the "@Override" annotation above this method signature(÷ÿÏÅøÿÿÿÿ8’ìç³†/
+š
+java:S1130"~Remove the declaration of thrown exception 'glyph.NoChildOperationsException', as it cannot be thrown from constructor's body.(ñžg8È•´†/

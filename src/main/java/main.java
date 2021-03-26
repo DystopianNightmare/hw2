@@ -8,88 +8,98 @@ public class main {
     public static void main(String[] args) throws NullChildException, NoChildOperationsException {
         SwingWindow swingWindow = new SwingWindow("TEST");
 
-        WidgetFactory widgetFactory = WidgetFactory.getInstance();
-//        Button button = widgetFactory.getButton();
-//        Label label = widgetFactory.getLabel(new SimpleCompositor(swingWindow));
-
-
-        String t = System.getenv("LexiWidget");
-
-
         Column main = new Column(new SimpleCompositor(swingWindow));
-        Column col = new Column(new SimpleCompositor(swingWindow));
-        Embellishment border;
-        Row row1 = new Row("This is a",new SimpleCompositor(swingWindow));
-        Row row2 = new Row("border demonstration.",new SimpleCompositor(swingWindow));
-        Row row3 = new Row("scroller too!",new SimpleCompositor(swingWindow));
-
-        Embellishment scrollbar;
-
-        Column column1 = new Column(new SimpleCompositor(swingWindow));
+        Embellishment scrollbar = new Scrollbar(new SimpleCompositor(swingWindow),main);
+        Embellishment border = new Border(5, new SimpleCompositor(swingWindow),scrollbar);
+        Column subMain = new Column(new SimpleCompositor(swingWindow));
         Row topRow = new Row(new SimpleCompositor(swingWindow));
+        Row middleRow = new Row(new SimpleCompositor(swingWindow));
         Row bottomRow = new Row(new SimpleCompositor(swingWindow));
+        Row buttonRow = new Row("PQ",new SimpleCompositor(swingWindow));
+
+        Character a = new glyph.Character('a');
+        Rectangle rectangle = new Rectangle(20,10);
+        Column column = new Column(new SimpleCompositor(swingWindow));
+        Row rowlabel = new Row(new SimpleCompositor(swingWindow));
+
+        rowlabel.insert(new glyph.Character('p'),0);
+        rowlabel.insert(new glyph.Character('q'),1);
+
+        WidgetFactory widgetFactory = WidgetFactory.getInstance();
+        Label label = widgetFactory.getLabel(new SimpleCompositor(swingWindow),rowlabel);
+        Button button = widgetFactory.getButton(new SimpleCompositor(swingWindow), bottomRow);
+
+        column.insert(new glyph.Character('X'),0);
+        column.insert(label,1);
+        column.insert(new glyph.Character('Z'),2);
+
+        topRow.insert(new glyph.Character('a'),0);
+        topRow.insert(new Rectangle(20,10),1);
+        topRow.insert(column, 2);
+        topRow.insert(new glyph.Character('b'),3);
+
+        middleRow.insert(new glyph.Character('x'),0);
+        middleRow.insert(new Rectangle(10,20), 1);
+        middleRow.insert(new glyph.Character('y'),2);
+
+        bottomRow.insert(new glyph.Character('P'),0);
+        bottomRow.insert(new glyph.Character('Q'),1);
+
+        subMain.insert(topRow,0);
+        subMain.insert(middleRow,1);
+        subMain.insert(button,2);
+        main.insert(subMain, 0);
 
 
 
 
-        glyph.Character Q = new glyph.Character('Q');
-        glyph.Character R = new glyph.Character('R');
-        glyph.Character T = new glyph.Character('T');
-        bottomRow.insert(Q, 0);      // add button here _______________-------~~~~~~~
-        bottomRow.insert(R, 1);
-        bottomRow.insert(T, 2);
-        Label label = widgetFactory.getLabel(new SimpleCompositor(swingWindow),bottomRow);
-        Button button = widgetFactory.getButton(new SimpleCompositor(swingWindow), topRow);
+//        main.insert(new glyph.Character('a'), 0);
 
-//        bottomRow.insert(button, 1);
+//        Column main = new Column(new SimpleCompositor(swingWindow));
+//        Column col = new Column(new SimpleCompositor(swingWindow));
+//        Row row1 = new Row("This is a",new SimpleCompositor(swingWindow));
+//        Row row2 = new Row("border demonstration.",new SimpleCompositor(swingWindow));
+//        Row row3 = new Row("scroller too!",new SimpleCompositor(swingWindow));
+//
+//        Column column1 = new Column(new SimpleCompositor(swingWindow));
+//        Row topRow = new Row(new SimpleCompositor(swingWindow));
+//        Row bottomRow = new Row(new SimpleCompositor(swingWindow));
+//
+//        glyph.Character Q = new glyph.Character('Q');
+//        glyph.Character R = new glyph.Character('R');
+//        glyph.Character T = new glyph.Character('T');
+//        bottomRow.insert(Q, 0);
+//        bottomRow.insert(R, 1);
+//        bottomRow.insert(T, 2);
+//
+//        WidgetFactory widgetFactory = WidgetFactory.getInstance();
+//        Label label = widgetFactory.getLabel(new SimpleCompositor(swingWindow),bottomRow);
+//        Button button = widgetFactory.getButton(new SimpleCompositor(swingWindow), topRow);
+//
+//        main.insert(label,0);
+//        main.insert(button,1);
+//
+//        glyph.Character a = new glyph.Character('a');
+//        topRow.insert(a, 0);
+//        Rectangle rectangle = new Rectangle(15,10);
+//        topRow.insert(rectangle,1);
+//        topRow.insert(column1,2);
+//
+//        col.insert(row1,0);
+//        col.insert(row2,1);
+//        col.insert(row3,2);
+//
+//        Embellishment border = new Border(3,new SimpleCompositor(swingWindow), col);
+//        Embellishment scrollbar = new Scrollbar(new SimpleCompositor(swingWindow),border);
+//        Embellishment border1 = new Border(3,new SimpleCompositor(swingWindow), scrollbar);
+//        Embellishment border2 = new Border(3,new SimpleCompositor(swingWindow), border1);
+//        topRow.insert(border2,3);
+//
+//        glyph.Character B = new Character('B');
+//        topRow.insert(B,4);
 
 
 
-//        label.insert(Q,0);
-//        glyph.Character M = new glyph.Character('M');
-//        button.insert(M,0);
-
-        glyph.Character a = new glyph.Character('a');
-        topRow.insert(a, 0);
-        Rectangle rectangle = new Rectangle(15,10);
-        topRow.insert(rectangle,1);
-
-        topRow.insert(column1,2);
-
-        col.insert(row1,0);
-        col.insert(row2,1);
-        col.insert(row3,2);
-
-//        scrollbar.insert(col,0);
-//        border.insert(scrollbar,0);
-        border = new Border(3,new SimpleCompositor(swingWindow), col);
-        scrollbar = new Scrollbar(new SimpleCompositor(swingWindow),border);
-        Embellishment border1 = new Border(3,new SimpleCompositor(swingWindow), scrollbar);
-        Embellishment border2 = new Border(3,new SimpleCompositor(swingWindow), border1);
-        topRow.insert(border2,3);
-
-//        scrollbar = new glyph.Scrollbar(new glyph.SimpleCompositor(swingWindow),col);
-//        border = new glyph.Border(3,new glyph.SimpleCompositor(swingWindow), scrollbar);
-//        topRow.insert(border,3);
-
-//        topRow.insert(border,3);
-//        border.insert(col,0);
-//        scrollbar.insert(border,0);
-//        topRow.insert(scrollbar,3);
-        glyph.Character B = new Character('B');
-        topRow.insert(B,4);
-
-//        glyph.Character x = new glyph.Character('x');
-//        bottomRow.insert(x, 0);
-//        glyph.Rectangle rectangle1 = new glyph.Rectangle(10,15);
-//        bottomRow.insert(rectangle1,1);
-//        glyph.Character y = new glyph.Character('y');
-//        bottomRow.insert(y, 2);
-//        topRow.remove(B);
-//        scrollbar.remove(col);
-//        topRow.remove(border);
-        main.insert(label,0);
-        main.insert(button,1);
-        swingWindow.setContents(main);
+        swingWindow.setContents(border);
     }
 }

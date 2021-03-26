@@ -8,12 +8,14 @@ import window.Window;
 
 class GreenButton extends Button {
 
-    GreenButton(Compositor compositor, Glyph g) throws NoChildOperationsException {
+    GreenButton(Compositor compositor, Glyph glyph) throws NoChildOperationsException {
         super(compositor);
-        children.add(0,g);
+        this.children.add(0,glyph);
+        glyph.setParent(this);
     }
 
     public void draw(Window window) {
+
         window.drawButton(getBounds().getPoint().x, getBounds().getPoint().y,getBounds().getWidth(),
                 getBounds().getHeight() ,"green");
         super.draw(window);
