@@ -1,7 +1,6 @@
 package glyph;
-import window.*;
-import window.Window;
 
+import window.Window;
 import java.awt.*;
 
 public abstract class Glyph {

@@ -1,3 +1,6 @@
+/*
+implements the  factory method and singleton
+ */
 package factory;
 
 import glyph.Compositor;
@@ -8,8 +11,8 @@ import window.Window;
 
  class RedFactory extends WidgetFactory {
 
-
     private static RedFactory redFactory;
+
     private RedFactory(){
         super();
     };

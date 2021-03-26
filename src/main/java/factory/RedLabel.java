@@ -1,3 +1,6 @@
+/*
+part of the  factory method
+ */
 package factory;
 
 import glyph.*;
@@ -28,7 +31,7 @@ class RedLabel extends Label {
     }
 
     @Override
-    public void insert(Glyph glyph, int position) throws NoChildOperationsException {
+    public void insert(Glyph glyph, int position) {
         children.add(0,glyph);
     }
 }

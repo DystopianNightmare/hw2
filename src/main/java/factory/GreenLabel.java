@@ -11,11 +11,10 @@ class GreenLabel extends Label {
     GreenLabel(Compositor compositor, Glyph glyph) throws NoChildOperationsException {
         super(compositor);
         this.children.add(0,glyph);
-    glyph.setParent(this);
+         glyph.setParent(this);
     }
 
     public void draw(Window window) {
-
         window.drawLabel(getBounds().getPoint().x, getBounds().getPoint().y,getBounds().getWidth(),
                 getBounds().getHeight() ,"green");
         super.draw(window);
@@ -31,9 +30,4 @@ class GreenLabel extends Label {
         getBounds().setHeight(bounds.getHeight());
         getBounds().setWidth(bounds.getWidth());
     }
-
-//    @Override
-//    public void insert(Glyph glyph, int position) throws NoChildOperationsException {
-//        children.add(0,glyph);
-//    }
 }

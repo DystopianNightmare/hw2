@@ -1,3 +1,6 @@
+/*
+implements the abstract factory method and singleton
+ */
 package factory;
 
 import glyph.Compositor;
@@ -19,14 +22,12 @@ public abstract class WidgetFactory {
                factory =  RedFactory.getInstance();
                return factory;
           }
-
           factory =  GreenFactory.getInstance();
           return factory;
      }
 
      public Button getButton(Compositor compositor, Glyph g) throws NoChildOperationsException {
           return factory.getButton(compositor, g);
-
      }
 
      public Label getLabel(Compositor compositor, Glyph g) throws NoChildOperationsException {

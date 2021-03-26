@@ -9,6 +9,7 @@ private int thickness;
         thickness = 10;
         children.add(0,glyph);
         glyph.setParent(this);
+        this.compose();
     }
 
     @Override

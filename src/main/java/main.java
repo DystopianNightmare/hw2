@@ -16,18 +16,12 @@ public class main {
         Row middleRow = new Row(new SimpleCompositor(swingWindow));
         Row bottomRow = new Row(new SimpleCompositor(swingWindow));
         Row buttonRow = new Row("PQ",new SimpleCompositor(swingWindow));
-
-        Character a = new glyph.Character('a');
-        Rectangle rectangle = new Rectangle(20,10);
+        Row labelRow = new Row("pq",new SimpleCompositor(swingWindow));
         Column column = new Column(new SimpleCompositor(swingWindow));
-        Row rowlabel = new Row(new SimpleCompositor(swingWindow));
-
-        rowlabel.insert(new glyph.Character('p'),0);
-        rowlabel.insert(new glyph.Character('q'),1);
 
         WidgetFactory widgetFactory = WidgetFactory.getInstance();
-        Label label = widgetFactory.getLabel(new SimpleCompositor(swingWindow),rowlabel);
-        Button button = widgetFactory.getButton(new SimpleCompositor(swingWindow), bottomRow);
+        Label label = widgetFactory.getLabel(new SimpleCompositor(swingWindow),labelRow);
+        Button button = widgetFactory.getButton(new SimpleCompositor(swingWindow), buttonRow);
 
         column.insert(new glyph.Character('X'),0);
         column.insert(label,1);
@@ -49,6 +43,10 @@ public class main {
         subMain.insert(middleRow,1);
         subMain.insert(button,2);
         main.insert(subMain, 0);
+
+        swingWindow.setContents(border);
+    }
+}
 
 
 
@@ -98,8 +96,3 @@ public class main {
 //        glyph.Character B = new Character('B');
 //        topRow.insert(B,4);
 
-
-
-        swingWindow.setContents(border);
-    }
-}

@@ -1,3 +1,6 @@
+/*
+part of the  factory method
+ */
 package factory;
 
 import glyph.Bounds;
@@ -15,7 +18,6 @@ class GreenButton extends Button {
     }
 
     public void draw(Window window) {
-
         window.drawButton(getBounds().getPoint().x, getBounds().getPoint().y,getBounds().getWidth(),
                 getBounds().getHeight() ,"green");
         super.draw(window);
@@ -31,6 +33,4 @@ class GreenButton extends Button {
         getBounds().setHeight(bounds.getHeight());
         getBounds().setWidth(bounds.getWidth());
     }
-
-
 }

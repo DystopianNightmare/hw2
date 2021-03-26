@@ -1,17 +1,17 @@
 package glyph;
-import window.*;
-import window.Window;
 
+import window.Window;
 import java.awt.*;
 public class Border extends Embellishment {
 
     private int width;
 
-    public Border(int width, Compositor compositor, Glyph glyph) throws NoChildOperationsException {
+    public Border(int width, Compositor compositor, Glyph glyph)  {
         super(compositor);
         this.width = width;
         children.add(0,glyph);
         glyph.setParent(this);
+        this.compose();
     }
 
     @Override
@@ -33,6 +33,7 @@ public class Border extends Embellishment {
         getBounds().setWidth(bounds.getWidth()+width*2);
     }
 
+    // this is only different because it is used to adjust the child based off the width of the surrounding border
     @Override
     public void compose(){
         Bounds cursor = new Bounds(this.compositor.composition);
