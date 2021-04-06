@@ -5,7 +5,7 @@ import glyph.*;
 public abstract class Window {
 
     protected WindowImp windowImp;
-
+    private Glyph g;
     public WindowImp getWindowImp(){ return windowImp;}
 
     public void drawCharacter(char c, int x, int y) {
@@ -41,7 +41,13 @@ public abstract class Window {
     public void drawLabel(int x, int y, int width, int height, String color){
         windowImp.drawLabel(x,y,width,height,color);
     }
+    public void setRoot(Glyph g){ this.g=g;}
+
     public void draw() {
-//        windowImp.
+       Glyph root = g;
+        while (root.getParent() != null) {
+            root = root.getParent();
+        }
+        root.draw(this);
     }
 }

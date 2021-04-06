@@ -20,6 +20,6 @@ public class AwtFactory extends WindowFactory{
     };
 
     public WindowImp getWindow(String s, Window w){
-        return new AwtWindow(s,null);
+        return new AwtWindow(s,w);
     }
 }

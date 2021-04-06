@@ -33,7 +33,7 @@ public abstract class Glyph {
         throw new NoChildOperationsException();
     }
 
-    Glyph getParent() {
+    public Glyph getParent() {
         return parent;
     }
 
