@@ -51,4 +51,6 @@ public abstract class Glyph {
     public String toString() {
         return bounds.getPoint().x + " " + bounds.getPoint().y + " " + bounds.getHeight() + " " + bounds.getWidth();
     }
+
+
 }

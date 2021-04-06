@@ -1,50 +1,62 @@
+import bridge.SwingWindow;
+import bridge.WindowImp;
 import factory.*;
 import glyph.*;
-import glyph.Character;
-import window.*;
+import window.Window;
+import window.Window2;
 
 public class main {
 
     public static void main(String[] args) throws NullChildException, NoChildOperationsException {
-        SwingWindow swingWindow = new SwingWindow("TEST");
+//        SwingWindow swingWindow = new SwingWindow("TEST");
 
-        Column main = new Column(new SimpleCompositor(swingWindow));
-        Embellishment scrollbar = new Scrollbar(new SimpleCompositor(swingWindow),main);
-        Embellishment border = new Border(5, new SimpleCompositor(swingWindow),scrollbar);
-        Column subMain = new Column(new SimpleCompositor(swingWindow));
-        Row topRow = new Row(new SimpleCompositor(swingWindow));
-        Row middleRow = new Row(new SimpleCompositor(swingWindow));
-        Row bottomRow = new Row(new SimpleCompositor(swingWindow));
-        Row buttonRow = new Row("PQ",new SimpleCompositor(swingWindow));
-        Row labelRow = new Row("pq",new SimpleCompositor(swingWindow));
-        Column column = new Column(new SimpleCompositor(swingWindow));
 
-        WidgetFactory widgetFactory = WidgetFactory.getInstance();
-        Label label = widgetFactory.getLabel(new SimpleCompositor(swingWindow),labelRow);
-        Button button = widgetFactory.getButton(new SimpleCompositor(swingWindow), buttonRow);
+        Window window = new Window2();
+        WindowImp windowImp = window.getWindowImp();
 
-        column.insert(new glyph.Character('X'),0);
-        column.insert(label,1);
-        column.insert(new glyph.Character('Z'),2);
+        Column main = new Column(new SimpleCompositor(window));
+        main.insert(new glyph.Character('X'),0);
+        main.insert(new glyph.Character('Y'),1);
+//        Embellishment scrollbar = new Scrollbar(new SimpleCompositor(swingWindow),main);
+//        Embellishment border = new Border(5, new SimpleCompositor(swingWindow),scrollbar);
+//        Column subMain = new Column(new SimpleCompositor(swingWindow));
+//        Row topRow = new Row(new SimpleCompositor(swingWindow));
+//        Row middleRow = new Row(new SimpleCompositor(swingWindow));
+//        Row bottomRow = new Row(new SimpleCompositor(swingWindow));
+//        Row buttonRow = new Row("PQ",new SimpleCompositor(swingWindow));
+//        Row labelRow = new Row("pq",new SimpleCompositor(swingWindow));
+//        Column column = new Column(new SimpleCompositor(swingWindow));
+//
+//        WidgetFactory widgetFactory = WidgetFactory.getInstance();
+//        Label label = widgetFactory.getLabel(new SimpleCompositor(swingWindow),labelRow);
+//        Button button = widgetFactory.getButton(new SimpleCompositor(swingWindow), buttonRow);
+//
+//
+//
+//
+//        column.insert(new glyph.Character('X'),0);
+//        column.insert(label,1);
+//        column.insert(new glyph.Character('Z'),2);
+//
+//        topRow.insert(new glyph.Character('a'),0);
+//        topRow.insert(new Rectangle(20,10),1);
+//        topRow.insert(column, 2);
+//        topRow.insert(new glyph.Character('b'),3);
+//
+//        middleRow.insert(new glyph.Character('x'),0);
+//        middleRow.insert(new Rectangle(10,20), 1);
+//        middleRow.insert(new glyph.Character('y'),2);
+//
+//        bottomRow.insert(new glyph.Character('P'),0);
+//        bottomRow.insert(new glyph.Character('Q'),1);
+//
+//        subMain.insert(topRow,0);
+//        subMain.insert(middleRow,1);
+//        subMain.insert(button,2);
+//        main.insert(subMain, 0);
 
-        topRow.insert(new glyph.Character('a'),0);
-        topRow.insert(new Rectangle(20,10),1);
-        topRow.insert(column, 2);
-        topRow.insert(new glyph.Character('b'),3);
-
-        middleRow.insert(new glyph.Character('x'),0);
-        middleRow.insert(new Rectangle(10,20), 1);
-        middleRow.insert(new glyph.Character('y'),2);
-
-        bottomRow.insert(new glyph.Character('P'),0);
-        bottomRow.insert(new glyph.Character('Q'),1);
-
-        subMain.insert(topRow,0);
-        subMain.insert(middleRow,1);
-        subMain.insert(button,2);
-        main.insert(subMain, 0);
-
-        swingWindow.setContents(border);
+//        window.setContents(main);
+        window.getWindowImp().setContents();
     }
 }
 

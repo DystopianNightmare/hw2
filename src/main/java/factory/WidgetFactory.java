@@ -3,8 +3,11 @@ implements the abstract factory method and singleton
  */
 package factory;
 
+import bridge.SwingWindow;
+import bridge.WindowImp;
 import glyph.Compositor;
 import glyph.*;
+import window.Window;
 
 public abstract class WidgetFactory {
 
@@ -18,7 +21,7 @@ public abstract class WidgetFactory {
           if(factory != null){
                return factory;
           }
-          if(type.equalsIgnoreCase("RED")){
+          if(type != null &&  type.equalsIgnoreCase("RED")){
                factory =  RedFactory.getInstance();
                return factory;
           }

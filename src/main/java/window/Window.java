@@ -1,20 +1,47 @@
 package window;
+import bridge.WindowImp;
 import glyph.*;
 
-public interface Window {
+public abstract class Window {
 
-    void drawCharacter(char c, int x, int y);
-    void drawRectangle(int x, int y, int width, int height);
+    protected WindowImp windowImp;
 
-    int charWidth(char c);
-    int charHeight(char c);
+    public WindowImp getWindowImp(){ return windowImp;}
 
-    void setContents(Glyph glyph);
+    public void drawCharacter(char c, int x, int y) {
+        windowImp.drawCharacter(c,x,y);
+    }
 
-    void addBorder(int x1, int y1, int x2, int y2, int width);
-    void addScrollBar(int x, int y, int width, int height);
+    public void drawRectangle(int x, int y, int width, int height){
+        windowImp.drawRectangle(x,y,width,height);
+    }
 
-    void drawButton(int x, int y, int width, int height, String color);
-    void drawLabel(int x, int y, int width, int height, String color);
+    public int charWidth(char c) {
+        return windowImp.charWidth(c);
+    }
 
+    public int charHeight(char c){
+        return windowImp.charHeight(c);
+    }
+
+//    public void setContents(Glyph glyph){
+//
+//    }
+
+    public void addBorder(int x1, int y1, int x2, int y2, int width){
+        windowImp.addBorder(x1,y1,x2,y2,width);
+    }
+    public void addScrollBar(int x, int y, int width, int height){
+        windowImp.addScrollBar(x,y,width,height);
+    }
+
+    public void drawButton(int x, int y, int width, int height, String color){
+        windowImp.drawButton(x,y,width,height,color);
+    }
+    public void drawLabel(int x, int y, int width, int height, String color){
+        windowImp.drawLabel(x,y,width,height,color);
+    }
+    public void draw() {
+//        windowImp.
+    }
 }
