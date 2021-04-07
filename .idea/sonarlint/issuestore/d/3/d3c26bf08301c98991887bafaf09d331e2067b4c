@@ -1,14 +1,21 @@
 
-X	java:S125P"<This block of commented-out lines of code should be removed.(½ï®¡8ÏÍâ†/
-X	java:S125M"<This block of commented-out lines of code should be removed.(£Èí¦8ÏÍâ†/
-X	java:S125V"<This block of commented-out lines of code should be removed.(ãµ±‰8ÏÍâ†/
-]	java:S1256"<This block of commented-out lines of code should be removed.(Ë”øçøÿÿÿÿ8ÏÍâ†/
-]	java:S1258"<This block of commented-out lines of code should be removed.(ÖÙâÊùÿÿÿÿ8ÏÍâ†/
-]	java:S125Z"<This block of commented-out lines of code should be removed.(ÖÇ¿Àùÿÿÿÿ8ÏÍâ†/
-X	java:S125`"<This block of commented-out lines of code should be removed.(É»”8ÏÍâ†/
-i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(·š†‡8àôéõ/
-X	java:S125B"<This block of commented-out lines of code should be removed.(ÑôéŠ8ÏÍâ†/
-W	java:S125>"<This block of commented-out lines of code should be removed.(–‹áx8ÏÍâ†/
-]	java:S125I"<This block of commented-out lines of code should be removed.(ú˜Ğ—ûÿÿÿÿ8ÏÍâ†/
+]	java:S125B"<This block of commented-out lines of code should be removed.(Ë”øçøÿÿÿÿ8ÏÍâ†/
+W	java:S125J"<This block of commented-out lines of code should be removed.(–‹áx8ÏÍâ†/
+H
+java:S1481"+Remove this unused "border" local variable.(éÌ®î8í’¯Š/
+]	java:S125D"<This block of commented-out lines of code should be removed.(ÖÙâÊùÿÿÿÿ8ÏÍâ†/
+X	java:S125l"<This block of commented-out lines of code should be removed.(É»”8ÏÍâ†/
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(·š†‡8‰¢ä®Š/
+]	java:S125U"<This block of commented-out lines of code should be removed.(ú˜Ğ—ûÿÿÿÿ8ÏÍâ†/
+X	java:S125:"<This block of commented-out lines of code should be removed.(µÁù8‰¢ä®Š/
+P
+java:S1481".Remove this unused "windowImp" local variable.(Å¬ıÁøÿÿÿÿ8‰¢ä®Š/
+X	java:S125N"<This block of commented-out lines of code should be removed.(ÑôéŠ8ÏÍâ†/
+X	java:S125\"<This block of commented-out lines of code should be removed.(½ï®¡8ÏÍâ†/
+]	java:S125f"<This block of commented-out lines of code should be removed.(ÖÇ¿Àùÿÿÿÿ8ÏÍâ†/
 i
-java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(ĞÓ®Ô8àôéõ/
+java:S1223
+"LRename this method to prevent any misunderstanding or make it a constructor.(ĞÓ®Ô8‰¢ä®Š/
+X	java:S125b"<This block of commented-out lines of code should be removed.(ãµ±‰8ÏÍâ†/
+X	java:S125Y"<This block of commented-out lines of code should be removed.(£Èí¦8ÏÍâ†/
+]	java:S125"<This block of commented-out lines of code should be removed.(‹ÎÜ“ıÿÿÿÿ8‰¢ä®Š/

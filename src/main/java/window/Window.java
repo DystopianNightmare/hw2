@@ -1,5 +1,6 @@
 package window;
 import bridge.WindowImp;
+import factory.WindowFactory;
 import glyph.*;
 
 public abstract class Window {
@@ -7,6 +8,11 @@ public abstract class Window {
     protected WindowImp windowImp;
     private Glyph g;
     public WindowImp getWindowImp(){ return windowImp;}
+
+    public Window(){
+        WindowFactory windowFactory = WindowFactory.getInstance();
+        windowImp = windowFactory.getWindow("test",this);
+    }
 
     public void drawCharacter(char c, int x, int y) {
         windowImp.drawCharacter(c,x,y);

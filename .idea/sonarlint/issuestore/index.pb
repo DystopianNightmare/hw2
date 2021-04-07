@@ -15,8 +15,6 @@ c
 +src/main/java/glyph/NullChildException.java,7\1\7107ad510f4755262adf40537d6df05a8045a965
 Y
 )src/main/java/glyph/SimpleCompositor.java,d\c\dccf62df701b33c969bb2409c96d2e81a0fd39f4
-U
-%src/main/java/window/SwingWindow.java,e\0\e03d23d76945acf43048f725890e3254158081e1
 N
 src/main/java/glyph/Glyph.java,1\1\1114734156f3106b636ca541b3f645ed8cf7a79a
 L
@@ -53,3 +51,13 @@ S
 #src/main/java/factory/RedLabel.java,2\2\228db390192cbd8eacd4086479e045d9196d1612
 V
 &src/main/java/factory/GreenButton.java,b\d\bde1c9bd195db1373231576f07da6fd2f1cbe716
+Q
+!src/main/java/window/Window2.java,5\6\5609cd2ca5f781caa4f3bebd04df289f7e2cfd43
+U
+%src/main/java/bridge/SwingWindow.java,f\1\f10bf30b7324f3346bab5f1dd87c03028b36e812
+S
+#src/main/java/bridge/WindowImp.java,8\9\89e3ba08fcabf5d5003b3bfc2f14b19e2d90e3e4
+U
+%src/main/java/factory/AwtFactory.java,b\5\b56fbb1d5b0e58dffd812b4e2ed149e834dc49e7
+X
+(src/main/java/factory/WindowFactory.java,6\1\61976b15ccbb050ad1ed2cfdc7764a28f625b931

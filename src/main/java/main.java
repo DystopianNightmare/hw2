@@ -2,8 +2,9 @@ import bridge.SwingWindow;
 import bridge.WindowImp;
 import factory.*;
 import glyph.*;
+import window.ApplicationWindow;
 import window.Window;
-import window.Window2;
+
 
 public class main {
 
@@ -11,7 +12,7 @@ public class main {
 //        SwingWindow swingWindow = new SwingWindow("TEST");
 
 
-        Window window = new Window2();
+        Window window = new ApplicationWindow();
         WindowImp windowImp = window.getWindowImp();
         Column main = new Column(new SimpleCompositor(window));
         window.setRoot(main);

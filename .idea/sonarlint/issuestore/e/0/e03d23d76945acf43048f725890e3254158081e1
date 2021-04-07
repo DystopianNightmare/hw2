@@ -1,20 +1,0 @@
-
-q
-java:S1450"TRemove the "_pane" field and declare it as a local variable in the relevant methods.(ÿœ§ 8ñÙ’‘†/
-o	java:S116"NRename this field "_fm" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼»üÿÿÿÿ8ñÙ’‘†/
->
-java:S1170"!Make this final field static too.(üËØä8ñÙ’‘†/
-r	java:S116"QRename this field "_glyph" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ åíøÿÿÿÿ8ñÙ’‘†/
-r	java:S116"QRename this field "_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¯Ğàúÿÿÿÿ8ñÙ’‘†/
-u	java:S116"TRename this field "_graphics" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã”•ğıÿÿÿÿ8ñÙ’‘†/
-l	java:S116"PRename this field "_pane" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿœ§ 8ñÙ’‘†/
-s	java:S116"RRename this field "_jFrame" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å²ÅÜøÿÿÿÿ8ñÙ’‘†/
-W
-java:S1161":Add the "@Override" annotation above this method signature(®¡òù8ñÙ’‘†/
-n	java:S116"RRename this field "_window" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¨Ô•8ñÙ’‘†/
-C
-java:S1170"!Make this final field static too.(Ë‡€ÿÿÿÿÿ8ñÙ’‘†/
-k
-java:S3252&"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(ĞöÀÉıÿÿÿÿ8ñÙ’‘†/
-E
-java:S11727"(Remove this unused method parameter "c".(­ı•å8ñÙ’‘†/
