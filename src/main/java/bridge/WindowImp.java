@@ -1,5 +1,5 @@
 package bridge;
-
+//bridge
 import glyph.Glyph;
 import window.Window;
 

@@ -1,21 +1,21 @@
 
-g	java:S116"RRename this field "_window" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úğªö
-n	java:S116"TRename this field "_graphics" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã”•ğıÿÿÿÿ
-j
-java:S1450"TRemove the "_pane" field and declare it as a local variable in the relevant methods.(ÿœ§ 
-P
-java:S1161":Add the "@Override" annotation above this method signature(®¡òù
->
-java:S11727"(Remove this unused method parameter "c".(­ı•å
-k	java:S116"QRename this field "_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¯Ğàúÿÿÿÿ
-<
-java:S1170"!Make this final field static too.(Ë‡€ÿÿÿÿÿ
-7
-java:S1170"!Make this final field static too.(üËØä
-e	java:S116"PRename this field "_pane" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿœ§ 
-l	java:S116"RRename this field "_jFrame" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å²ÅÜøÿÿÿÿ
 d
 java:S3252%"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(ĞöÀÉıÿÿÿÿ
+>
+java:S11727"(Remove this unused method parameter "c".(­ı•å
+e	java:S116"PRename this field "_pane" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿœ§ 
+k	java:S116"QRename this field "_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¯Ğàúÿÿÿÿ
+P
+java:S1161":Add the "@Override" annotation above this method signature(®¡òù
+j
+java:S1450"TRemove the "_pane" field and declare it as a local variable in the relevant methods.(ÿœ§ 
 h	java:S116"NRename this field "_fm" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼»üÿÿÿÿ
+g	java:S116"RRename this field "_window" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úğªö
 j
 java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(ÏÁ‹–
+7
+java:S1170"!Make this final field static too.(üËØä
+l	java:S116"RRename this field "_jFrame" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å²ÅÜøÿÿÿÿ
+<
+java:S1170"!Make this final field static too.(Ë‡€ÿÿÿÿÿ
+n	java:S116"TRename this field "_graphics" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã”•ğıÿÿÿÿ

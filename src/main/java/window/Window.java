@@ -30,9 +30,9 @@ public abstract class Window {
         return windowImp.charHeight(c);
     }
 
-//    public void setContents(Glyph glyph){
-//
-//    }
+    public void setContents(){
+        windowImp.setContents();
+    }
 
     public void addBorder(int x1, int y1, int x2, int y2, int width){
         windowImp.addBorder(x1,y1,x2,y2,width);

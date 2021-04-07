@@ -13,10 +13,13 @@ public class main {
 
 
         Window window = new ApplicationWindow();
+        Window window1 = new ApplicationWindow();
         WindowImp windowImp = window.getWindowImp();
         Column main = new Column(new SimpleCompositor(window));
-        window.setRoot(main);
-
+//        Column main1 = new Column(new SimpleCompositor(window1));
+//        Row topRow1 = new Row(new SimpleCompositor(window1));
+//        main1.insert(topRow1,0);
+//        topRow1.insert(new glyph.Character('a'),0);
 
         Embellishment scrollbar = new Scrollbar(new SimpleCompositor(window),main);
         Embellishment border = new Border(5, new SimpleCompositor(window),scrollbar);
@@ -56,8 +59,10 @@ public class main {
         subMain.insert(button,2);
         main.insert(subMain, 0);
 
-//        window.setContents(main);
-        window.getWindowImp().setContents();
+        window.setRoot(main);
+        window.setContents();
+//        window1.setRoot(main1);
+//        window1.setContents();
     }
 }
 

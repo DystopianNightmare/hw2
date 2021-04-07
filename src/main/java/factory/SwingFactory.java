@@ -1,4 +1,6 @@
 package factory;
+//factory method
+// Singleton(127): Singleton
 
 import bridge.SwingWindow;
 import bridge.WindowImp;
@@ -14,11 +16,10 @@ public class SwingFactory extends WindowFactory{
         }
         return swingFactory;
     }
-    private SwingFactory(){
-        super();
-    };
+    private SwingFactory(){ }
 
-    public WindowImp getWindow(String s, Window w){
+    @Override
+    public WindowImp getWindowInstance(String s, Window w){
         return new SwingWindow(s,w);
     }
 }

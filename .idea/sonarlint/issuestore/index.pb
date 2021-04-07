@@ -51,8 +51,6 @@ S
 #src/main/java/factory/RedLabel.java,2\2\228db390192cbd8eacd4086479e045d9196d1612
 V
 &src/main/java/factory/GreenButton.java,b\d\bde1c9bd195db1373231576f07da6fd2f1cbe716
-Q
-!src/main/java/window/Window2.java,5\6\5609cd2ca5f781caa4f3bebd04df289f7e2cfd43
 U
 %src/main/java/bridge/SwingWindow.java,f\1\f10bf30b7324f3346bab5f1dd87c03028b36e812
 S
@@ -61,3 +59,5 @@ U
 %src/main/java/factory/AwtFactory.java,b\5\b56fbb1d5b0e58dffd812b4e2ed149e834dc49e7
 X
 (src/main/java/factory/WindowFactory.java,6\1\61976b15ccbb050ad1ed2cfdc7764a28f625b931
+[
++src/main/java/window/ApplicationWindow.java,4\e\4ece4c7624d3a3b3089bea99bb0c8e976b9393a5

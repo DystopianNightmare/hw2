@@ -1,4 +1,7 @@
 package factory;
+// AbstractFactory(87): AbstractFactory
+// Singleton(127): Singleton
+// FactoryMethod(107): Creator
 
 import bridge.WindowImp;
 import window.Window;
@@ -7,11 +10,9 @@ public abstract class WindowFactory  {
 
     private static WindowFactory factory;
 
-    public WindowFactory(){}        //make protected?
+    protected WindowFactory(){}        //make protected?
 
     public static WindowFactory getInstance() {
-
-
         String type = System.getenv("LexiWindow");
         if(factory != null){
             return factory;
@@ -23,7 +24,9 @@ public abstract class WindowFactory  {
         factory =  SwingFactory.getInstance();
         return factory;
     }
+     public abstract WindowImp getWindowInstance(String s, Window w) ;
+
     public WindowImp getWindow(String s, Window w){
-        return factory.getWindow(s, w);
+        return factory.getWindowInstance(s, w);
     }
 }

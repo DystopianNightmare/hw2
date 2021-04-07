@@ -1,4 +1,5 @@
 package bridge;
+//bridge
 
 import bridge.WindowImp;
 import glyph.Glyph;
@@ -7,9 +8,7 @@ import window.Window;
 import java.awt.*;
 import java.awt.event.*;
 
-// Bridge(151): ConcreteImplementorB
-// AbstractFactory(87): ProductA2
-// FactoryMethod(107): ConcreteProduct
+
 
 public class AwtWindow implements WindowImp {
 

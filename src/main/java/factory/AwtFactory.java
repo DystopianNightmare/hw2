@@ -1,4 +1,6 @@
 package factory;
+//factory method
+// Singleton(127): Singleton
 
 import bridge.AwtWindow;
 import bridge.SwingWindow;
@@ -19,7 +21,8 @@ public class AwtFactory extends WindowFactory{
         super();
     };
 
-    public WindowImp getWindow(String s, Window w){
+    @Override
+    public WindowImp getWindowInstance(String s, Window w){
         return new AwtWindow(s,w);
     }
 }
