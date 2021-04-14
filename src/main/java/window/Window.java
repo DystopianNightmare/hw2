@@ -56,4 +56,7 @@ public abstract class Window {
         }
         root.draw(this);
     }
+
+    public void key(char c) {  System.out.print("in key in window + char "+ c + "\n");}
+    public void click(int i, int j) { System.out.print("in click in window i = " + i + " and  j = " + j + "\n") ;}
 }
