@@ -18,8 +18,8 @@ public class Character extends Glyph {
 
     @Override
     void setSize(Window window) {
-        super.getBounds().setHeight(window.charHeight(aChar));
-        super.getBounds().setWidth(window.charWidth(aChar));
+        super.getBounds().setHeight(window.getWindowImp().charHeight(aChar));
+        super.getBounds().setWidth(window.getWindowImp().charWidth(aChar));
     }
 
 }

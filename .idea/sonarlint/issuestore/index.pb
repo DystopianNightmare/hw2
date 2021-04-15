@@ -61,3 +61,13 @@ X
 (src/main/java/factory/WindowFactory.java,6\1\61976b15ccbb050ad1ed2cfdc7764a28f625b931
 [
 +src/main/java/window/ApplicationWindow.java,4\e\4ece4c7624d3a3b3089bea99bb0c8e976b9393a5
+S
+#src/main/java/bridge/AwtWindow.java,0\8\08537d363f7c5df356feb531c122a0e030af1582
+Q
+!src/main/java/command/KeyMap.java,8\8\889aea4db445c2de1116eb37358cede13684fa5a
+[
++src/main/java/command/IncrementCommand.java,4\1\41658b8ec85e869c4fb0bab58cbf9aed7ec10040
+W
+'src/main/java/factory/SwingFactory.java,b\3\b3db03866af6ad92d36a9b4228e578709090277c
+R
+"src/main/java/command/Command.java,0\5\0598fc46caab0ea8e5ed30956b47574d612c694f

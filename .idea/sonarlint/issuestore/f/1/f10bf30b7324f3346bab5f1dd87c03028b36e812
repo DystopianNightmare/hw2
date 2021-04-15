@@ -1,21 +1,32 @@
 
-d
-java:S3252%"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(ĞöÀÉıÿÿÿÿ
+C
+java:S1170"!Make this final field static too.(Ë‡€ÿÿÿÿÿ8¸…ı‘/
+n	java:S116"RRename this field "_window" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¨Ô•8¸…ı‘/
+E
+java:S1172O"(Remove this unused method parameter "c".(­ı•å8¸…ı‘/
+l	java:S116"PRename this field "_pane" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿœ§ 8¸…ı‘/
+
+java:S1186("€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(İÒî8¸…ı‘/
 >
-java:S11727"(Remove this unused method parameter "c".(­ı•å
-e	java:S116"PRename this field "_pane" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿœ§ 
-k	java:S116"QRename this field "_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¯Ğàúÿÿÿÿ
-P
-java:S1161":Add the "@Override" annotation above this method signature(®¡òù
+java:S1170"!Make this final field static too.(üËØä8¸…ı‘/
+
+java:S1186'"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(·ÖºÑ8¸…ı‘/
+
+java:S1186*"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷á›®8¸…ı‘/
+q	java:S116"PRename this field "_font" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñİšıÿÿÿÿÿ8¸…ı‘/
+W
+java:S1161/":Add the "@Override" annotation above this method signature(®¡òù8¸…ı‘/
+r	java:S116"QRename this field "_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¯Ğàúÿÿÿÿ8¸…ı‘/
+u	java:S116"TRename this field "_graphics" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã”•ğıÿÿÿÿ8¸…ı‘/
+£
+java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(§€Åÿÿÿÿÿ8¸…ı‘/
 j
-java:S1450"TRemove the "_pane" field and declare it as a local variable in the relevant methods.(ÿœ§ 
-h	java:S116"NRename this field "_fm" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼»üÿÿÿÿ
-g	java:S116"RRename this field "_window" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úğªö
-j
-java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(ÏÁ‹–
-7
-java:S1170"!Make this final field static too.(üËØä
-l	java:S116"RRename this field "_jFrame" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å²ÅÜøÿÿÿÿ
-<
-java:S1170"!Make this final field static too.(Ë‡€ÿÿÿÿÿ
-n	java:S116"TRename this field "_graphics" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã”•ğıÿÿÿÿ
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(ÏÁ‹–
+
+java:S1186)"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ôãƒ8¸…ı‘/
+k
+java:S3252?"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(ĞöÀÉıÿÿÿÿ8¸…ı‘/
+s	java:S116"RRename this field "_jFrame" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å²ÅÜøÿÿÿÿ8¸…ı‘/
+o	java:S116"NRename this field "_fm" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼»üÿÿÿÿ8¸…ı‘/
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(è®ä›8¸…ı‘/

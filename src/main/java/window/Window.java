@@ -1,5 +1,8 @@
 package window;
 import bridge.WindowImp;
+import command.Command;
+import command.IncrementCommand;
+import command.KeyMap;
 import factory.WindowFactory;
 import glyph.*;
 
@@ -8,6 +11,7 @@ public abstract class Window {
     protected WindowImp windowImp;
     private Glyph g;
     public WindowImp getWindowImp(){ return windowImp;}
+    private  KeyMap keyMap;
 
     public Window(){
         WindowFactory windowFactory = WindowFactory.getInstance();
@@ -57,6 +61,17 @@ public abstract class Window {
         root.draw(this);
     }
 
-    public void key(char c) {  System.out.print("in key in window + char "+ c + "\n");}
+    public void key(char c) {
+        Command cmd = keyMap.get(c);
+        cmd.Execute();
+        Glyph root = g;
+        while (root.getParent() != null) {
+            root = root.getParent();
+        }
+        root.compose();
+        windowImp.repaint();
+    }
     public void click(int i, int j) { System.out.print("in click in window i = " + i + " and  j = " + j + "\n") ;}
+    public void setKeyMap(KeyMap keyMap){ this.keyMap=keyMap;}
+
 }

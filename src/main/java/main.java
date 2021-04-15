@@ -1,5 +1,7 @@
-import bridge.SwingWindow;
+
 import bridge.WindowImp;
+import command.*;
+
 import factory.*;
 import glyph.*;
 import window.ApplicationWindow;
@@ -13,13 +15,16 @@ public class main {
 
 
         Window window = new ApplicationWindow();
-        Window window1 = new ApplicationWindow();
+//        Window window1 = new ApplicationWindow();
         WindowImp windowImp = window.getWindowImp();
         Column main = new Column(new SimpleCompositor(window));
-//        Column main1 = new Column(new SimpleCompositor(window1));
-//        Row topRow1 = new Row(new SimpleCompositor(window1));
-//        main1.insert(topRow1,0);
-//        topRow1.insert(new glyph.Character('a'),0);
+
+        KeyMap keyMap = new KeyMap();
+        window.setKeyMap(keyMap);
+        keyMap.put('i',new IncrementCommand(windowImp));
+        keyMap.put('d',new DecrementCommand(windowImp));
+        keyMap.put('r',new RedoCommand(windowImp));
+        keyMap.put('u',new UndoCommand(windowImp));
 
         Embellishment scrollbar = new Scrollbar(new SimpleCompositor(window),main);
         Embellishment border = new Border(5, new SimpleCompositor(window),scrollbar);
