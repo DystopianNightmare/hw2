@@ -1,16 +1,23 @@
 package command;
 
 import bridge.WindowImp;
+import window.Window;
 
-public class IncrementCommand implements Command{
+public class IncrementCommand extends Command{
 
-    private WindowImp windowImp;
+    private Window window;
+    private int state;
 
-    public IncrementCommand(WindowImp windowImp){
-        this.windowImp=windowImp;
+    public IncrementCommand(Window window){
+        this.window=window;
     }
 
     public void Execute() {
-        windowImp.setFontSize(windowImp.getFontSize()+1);
+        state = window.getWindowImp().getFontSize();
+        window.getWindowImp().setFontSize(window.getWindowImp().getFontSize()+1);
     }
+    public int getState() { return state; }
+
+
+
 }

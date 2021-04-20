@@ -1,17 +1,27 @@
 package command;
 
 import bridge.WindowImp;
+import window.Window;
 
-public class RedoCommand implements Command{
-    private WindowImp windowImp;
+public class RedoCommand extends Command{
+    private Window window;
     private int state;
 
-    public RedoCommand(WindowImp windowImp){
-        this.windowImp=windowImp;
+    public RedoCommand(Window window){
+        this.window=window;
     }
 
     public void Execute() {
-//        state = windowImp.getFontSize();
-        windowImp.setFontSize(windowImp.getFontSize()-1);
+        if(window.getCommandHistory().getIndex() < window.getCommandHistory().historyLength()) {
+
+            Command cmd = window.getCommandHistory().getCommand(window.getCommandHistory().getIndex());
+            cmd.Execute();
+            window.getCommandHistory().setIndex(window.getCommandHistory().getIndex()+1);
+//            window.getWindowImp().setFontSize(cmd.getState());
+
+        }
     }
+    public int getState() { return state; }
+
+
 }

@@ -1,3 +1,4 @@
 
-Z	java:S106H"9Replace this use of System.out or System.err by a logger.(şäêàúÿÿÿÿ8øû’’/
-Z	java:S106A"9Replace this use of System.out or System.err by a logger.(Ó¾Û‚üÿÿÿÿ8Êˆ¥¥/
+Z	java:S106J"9Replace this use of System.out or System.err by a logger.(şäêàúÿÿÿÿ8øû’’/
+Q
+java:S1128"5Remove this unused import 'command.IncrementCommand'.(Öu8ñ¡¿/

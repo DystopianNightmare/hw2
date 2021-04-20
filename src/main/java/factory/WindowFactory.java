@@ -13,7 +13,7 @@ public abstract class WindowFactory  {
     protected WindowFactory(){}        //make protected?
 
     public static WindowFactory getInstance() {
-        String type = System.getenv("LexiWindow");
+        String type = System.getenv("LexiWindow1");
         if(factory != null){
             return factory;
         }

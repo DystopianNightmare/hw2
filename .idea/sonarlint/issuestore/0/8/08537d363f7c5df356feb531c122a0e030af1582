@@ -1,34 +1,34 @@
 
-j
-java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(ÏÁ‹–
-=
-java:S1128"(Remove this unused import 'glyph.Glyph'.(¬¨–2
-n	java:S116"RRename this field "_window" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¨Ô•8Ïèş‘/
-l	java:S116"PRename this field "_pane" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿœ§ 8Ïèş‘/
-r	java:S116"QRename this field "_frame" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÛ´“úÿÿÿÿ8Ïèş‘/
-r	java:S116"QRename this field "_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¯Ğàúÿÿÿÿ8Ïèş‘/
-u	java:S116"TRename this field "_graphics" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã”•ğıÿÿÿÿ8Ïèş‘/
-q	java:S116"PRename this field "_font" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñİšıÿÿÿÿÿ8Ïèş‘/
-o	java:S116"NRename this field "_fm" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼»üÿÿÿÿ8Ïèş‘/
-C
-java:S1170"!Make this final field static too.(Ë‡€ÿÿÿÿÿ8Ïèş‘/
->
-java:S1170"!Make this final field static too.(üËØä8Ïèş‘/
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(è®ä›8Ïèş‘/
-£
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(§€Åÿÿÿÿÿ8Ïèş‘/
-
-java:S1186&"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(·ÖºÑ8Ïèş‘/
-
-java:S1186'"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(İÒî8Ïèş‘/
+E
+java:S1172O"(Remove this unused method parameter "c".(­ı•å8Ïèş‘/
 
 java:S1186("€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ôãƒ8Ïèş‘/
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(§€Åÿÿÿÿÿ8Ïèş‘/
+o	java:S116"NRename this field "_fm" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼»üÿÿÿÿ8Ïèş‘/
+>
+java:S1170"!Make this final field static too.(üËØä8Ïèş‘/
+j
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(ÏÁ‹–
+r	java:S116"QRename this field "_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¯Ğàúÿÿÿÿ8Ïèş‘/
+
+java:S1186'"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(İÒî8Ïèş‘/
+u	java:S116"TRename this field "_graphics" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã”•ğıÿÿÿÿ8Ïèş‘/
+r	java:S116"QRename this field "_frame" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÛ´“úÿÿÿÿ8Ïèş‘/
+=
+java:S1128"(Remove this unused import 'glyph.Glyph'.(¬¨–2
+l	java:S116"PRename this field "_pane" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿœ§ 8Ïèş‘/
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(è®ä›8Ïèş‘/
+W
+java:S1161.":Add the "@Override" annotation above this method signature(¤™–Å8Ïèş‘/
 
 java:S1186)"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷á›®8Ïèş‘/
 W
-java:S1161.":Add the "@Override" annotation above this method signature(¤™–Å8Ïèş‘/
-W
 java:S1161C":Add the "@Override" annotation above this method signature(åá•8Ïèş‘/
-E
-java:S1172O"(Remove this unused method parameter "c".(­ı•å8Ïèş‘/
+q	java:S116"PRename this field "_font" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñİšıÿÿÿÿÿ8Ïèş‘/
+C
+java:S1170"!Make this final field static too.(Ë‡€ÿÿÿÿÿ8Ïèş‘/
+n	java:S116"RRename this field "_window" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¨Ô•8Ïèş‘/
+
+java:S1186&"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(·ÖºÑ8Ïèş‘/

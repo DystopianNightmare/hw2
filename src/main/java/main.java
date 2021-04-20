@@ -19,12 +19,14 @@ public class main {
         WindowImp windowImp = window.getWindowImp();
         Column main = new Column(new SimpleCompositor(window));
 
+        CommandHistory commandHistory = new CommandHistory();
+        window.setCommandHistory(commandHistory);
         KeyMap keyMap = new KeyMap();
         window.setKeyMap(keyMap);
-        keyMap.put('i',new IncrementCommand(windowImp));
-        keyMap.put('d',new DecrementCommand(windowImp));
-        keyMap.put('r',new RedoCommand(windowImp));
-        keyMap.put('u',new UndoCommand(windowImp));
+        keyMap.put('i',new IncrementCommand(window));
+        keyMap.put('d',new DecrementCommand(window));
+        keyMap.put('r',new RedoCommand(window));
+        keyMap.put('u',new UndoCommand(window));
 
         Embellishment scrollbar = new Scrollbar(new SimpleCompositor(window),main);
         Embellishment border = new Border(5, new SimpleCompositor(window),scrollbar);

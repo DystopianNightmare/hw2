@@ -16,7 +16,7 @@ public class Border extends Embellishment {
 
     @Override
     public void draw(Window window) {
-        super.draw(window);
+//        super.draw(window);
         window.addBorder(getBounds().getPoint().x, getBounds().getPoint().y,
                 getBounds().getWidth()+getBounds().getPoint().x, getBounds().getHeight() + getBounds().getPoint().y, width);
         super.draw(window);

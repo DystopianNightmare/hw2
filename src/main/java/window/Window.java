@@ -1,10 +1,12 @@
 package window;
 import bridge.WindowImp;
 import command.Command;
+import command.CommandHistory;
 import command.IncrementCommand;
 import command.KeyMap;
 import factory.WindowFactory;
 import glyph.*;
+import prototype.Prototype;
 
 public abstract class Window {
 
@@ -12,10 +14,13 @@ public abstract class Window {
     private Glyph g;
     public WindowImp getWindowImp(){ return windowImp;}
     private  KeyMap keyMap;
+    private CommandHistory commandHistory;
+//    private int commandIndex;
 
     public Window(){
         WindowFactory windowFactory = WindowFactory.getInstance();
         windowImp = windowFactory.getWindow("test",this);
+//        commandIndex=0;
     }
 
     public void drawCharacter(char c, int x, int y) {
@@ -52,6 +57,13 @@ public abstract class Window {
         windowImp.drawLabel(x,y,width,height,color);
     }
     public void setRoot(Glyph g){ this.g=g;}
+    public Glyph getRoot(){
+        Glyph root = g;
+        while (root.getParent() != null) {
+            root = root.getParent();
+        }
+        return root;
+    }
 
     public void draw() {
        Glyph root = g;
@@ -63,15 +75,18 @@ public abstract class Window {
 
     public void key(char c) {
         Command cmd = keyMap.get(c);
-        cmd.Execute();
-        Glyph root = g;
-        while (root.getParent() != null) {
-            root = root.getParent();
+        Command command = (Command) cmd.clone();
+        if(command != null) {
+            commandHistory.add(command, c);
+            command.Execute();
+            g = getRoot();
+            g.compose();
+            windowImp.repaint();
         }
-        root.compose();
-        windowImp.repaint();
     }
     public void click(int i, int j) { System.out.print("in click in window i = " + i + " and  j = " + j + "\n") ;}
     public void setKeyMap(KeyMap keyMap){ this.keyMap=keyMap;}
+    public CommandHistory getCommandHistory() { return commandHistory; }
+    public void setCommandHistory(CommandHistory commandHistory) { this.commandHistory = commandHistory; }
 
 }

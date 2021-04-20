@@ -1,2 +1,4 @@
 
-o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÃëıÿÿÿÿ8ş¬Ü¤/
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ¸³îùÿÿÿÿ8ş¬Ü¤/
+J
+java:S1128"-Remove this unused import 'bridge.WindowImp'.(ÏÁ‹–8ø¡Ê¾/
