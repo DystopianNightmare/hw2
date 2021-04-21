@@ -41,6 +41,7 @@ public class main {
         WidgetFactory widgetFactory = WidgetFactory.getInstance();
         Label label = widgetFactory.getLabel(new SimpleCompositor(window),labelRow);
         Button button = widgetFactory.getButton(new SimpleCompositor(window), buttonRow);
+        button.setCommand(new IncrementCommand(window));
 
 
 

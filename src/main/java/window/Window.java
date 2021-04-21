@@ -12,11 +12,12 @@ import prototype.Prototype;
 public abstract class Window {
 
     protected WindowImp windowImp;
-    private Glyph g;
+    private CompositeGlyph g;
     public WindowImp getWindowImp(){ return windowImp;}
     private  KeyMap keyMap;
     private CommandHistory commandHistory;
     private Handler handler;
+
 
     public Window(){
         WindowFactory windowFactory = WindowFactory.getInstance();
@@ -57,9 +58,9 @@ public abstract class Window {
     public void drawLabel(int x, int y, int width, int height, String color){
         windowImp.drawLabel(x,y,width,height,color);
     }
-    public void setRoot(Glyph g){ this.g=g;}
-    public Glyph getRoot(){
-        Glyph root = g;
+    public void setRoot(CompositeGlyph g){ this.g=g;}
+    public CompositeGlyph getRoot(){
+        CompositeGlyph root = g;
         while (root.getParent() != null) {
             root = root.getParent();
         }
@@ -90,11 +91,13 @@ public abstract class Window {
     public void setKeyMap(KeyMap keyMap){ this.keyMap=keyMap;}
     public CommandHistory getCommandHistory() { return commandHistory; }
     public void setCommandHistory(CommandHistory commandHistory) { this.commandHistory = commandHistory; }
-    public void click(int i, int j) { System.out.print("in click in window i = " + i + " and  j = " + j + "\n") ;}
-    public Glyph find(){
-        Glyph g = getRoot();
-        for (int i = 0; i < g.; i++) {
-
-        return null;
+    public void click(int i, int j) {
+        System.out.print("in click in window i = " + i + " and  j = " + j + "\n") ;
+        Glyph clicked = g.find(i,j);
+        if(clicked != null) {
+            Command cmd = clicked.getCommand();
+            cmd.Execute();
+        }
     }
+
 }

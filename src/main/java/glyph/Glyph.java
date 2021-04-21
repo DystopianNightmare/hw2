@@ -1,12 +1,13 @@
 package glyph;
 
+import command.Command;
 import window.Window;
 import java.awt.*;
 
 public abstract class Glyph {
     private Bounds bounds = new Bounds(new Point(0, 0), 0, 0);
-    private Glyph parent = null;
-
+    private CompositeGlyph parent = null;
+    private Command command = null;
     protected Window window;
 
     public void compose() { }
@@ -33,11 +34,11 @@ public abstract class Glyph {
         throw new NoChildOperationsException();
     }
 
-    public Glyph getParent() {
+    public CompositeGlyph getParent() {
         return parent;
     }
 
-    public void setParent(Glyph parent) {
+    public void setParent(CompositeGlyph parent) {
         this.parent = parent;
     }
 
@@ -47,10 +48,13 @@ public abstract class Glyph {
 
     void setSize(Window window) {
     }
-
     public String toString() {
         return bounds.getPoint().x + " " + bounds.getPoint().y + " " + bounds.getHeight() + " " + bounds.getWidth();
     }
+    public Command getCommand() { return command; }
+    public void setCommand(Command command) { this.command = command; }
 
-
+    public Glyph find(int i, int j) {
+        return null;
+    }
 }

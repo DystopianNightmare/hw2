@@ -36,4 +36,20 @@ public abstract class CompositeGlyph extends Glyph {
     public List<Glyph> getChildren() {
         return children;
     }
+
+//    @Override
+    public Glyph find(int i, int j){
+        Glyph ret = null;
+        for (int k = 0; k < children.size(); k++) {
+            Glyph child = children.get(k);
+            if(child.getBounds().getPoint().x < i && i < child.getBounds().getPoint().x+child.getBounds().getWidth() && child.getBounds().getPoint().y < j && j < child.getBounds().getPoint().y+child.getBounds().getHeight()){
+//            if(child.getBounds().getPoint().x < i && i < child.getBounds().getPoint().x+child.getBounds().getWidth()){
+               if(child.getCommand() != null){
+                   return child;
+               }
+            }
+            ret = child.find(i,j);
+        }
+        return ret;
+    }
 }

@@ -34,4 +34,5 @@ import window.Window;
      public void insert(Glyph glyph, int position)  {
          children.add(0,glyph);
      }
+
 }
