@@ -96,7 +96,12 @@ public abstract class Window {
         Glyph clicked = g.find(i,j);
         if(clicked != null) {
             Command cmd = clicked.getCommand();
-            cmd.Execute();
+            Command command = (Command) cmd.clone();
+            commandHistory.add(command, 'q');
+            command.Execute();
+            g = getRoot();
+            g.compose();
+            windowImp.repaint();
         }
     }
 
