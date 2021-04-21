@@ -1,4 +1,8 @@
 
-Z	java:S106J"9Replace this use of System.out or System.err by a logger.(şäêàúÿÿÿÿ8øû’’/
+]	java:S125"<This block of commented-out lines of code should be removed.(ÄàÎ‹ıÿÿÿÿ8×ÇÉì/
 Q
-java:S1128"5Remove this unused import 'command.IncrementCommand'.(Öu8ñ¡¿/
+java:S1128"5Remove this unused import 'command.IncrementCommand'.(Öu8ñ¡¿/
+]	java:S125"<This block of commented-out lines of code should be removed.(¡ß¤ƒûÿÿÿÿ8™°Éì/
+Z	java:S106W"9Replace this use of System.out or System.err by a logger.(şäêàúÿÿÿÿ8øû’’/
+R
+java:S1128	"0Remove this unused import 'prototype.Prototype'.(ùà´»ûÿÿÿÿ8Œ¨¦î/

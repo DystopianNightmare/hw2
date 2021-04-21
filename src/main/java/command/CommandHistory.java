@@ -14,9 +14,10 @@ public class CommandHistory {
 
     public void add(Command command, char c){
         if(c != 'u' && c != 'r') {
-//            for(int i = index; i < historyLength(); i++){
-//                list.remove(i);
-//            }
+            int j = historyLength()-1;
+            for(int i = index; j >= i; j--){
+                list.remove(j);
+            }
             list.add(index, command);
             index++;
         }
