@@ -8,6 +8,7 @@ public abstract class Button extends Embellishment {
 
     public Button(Compositor compositor) {
         super(compositor);
+
     }
 
 }

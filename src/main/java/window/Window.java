@@ -6,6 +6,7 @@ import command.IncrementCommand;
 import command.KeyMap;
 import factory.WindowFactory;
 import glyph.*;
+import handler.Handler;
 import prototype.Prototype;
 
 public abstract class Window {
@@ -15,7 +16,7 @@ public abstract class Window {
     public WindowImp getWindowImp(){ return windowImp;}
     private  KeyMap keyMap;
     private CommandHistory commandHistory;
-//    private int commandIndex;
+    private Handler handler;
 
     public Window(){
         WindowFactory windowFactory = WindowFactory.getInstance();
@@ -75,8 +76,9 @@ public abstract class Window {
 
     public void key(char c) {
         Command cmd = keyMap.get(c);
-        Command command = (Command) cmd.clone();
-        if(command != null) {
+
+        if(cmd != null) {
+            Command command = (Command) cmd.clone();
             commandHistory.add(command, c);
             command.Execute();
             g = getRoot();
@@ -84,9 +86,15 @@ public abstract class Window {
             windowImp.repaint();
         }
     }
-    public void click(int i, int j) { System.out.print("in click in window i = " + i + " and  j = " + j + "\n") ;}
+
     public void setKeyMap(KeyMap keyMap){ this.keyMap=keyMap;}
     public CommandHistory getCommandHistory() { return commandHistory; }
     public void setCommandHistory(CommandHistory commandHistory) { this.commandHistory = commandHistory; }
+    public void click(int i, int j) { System.out.print("in click in window i = " + i + " and  j = " + j + "\n") ;}
+    public Glyph find(){
+        Glyph g = getRoot();
+        for (int i = 0; i < g.; i++) {
 
+        return null;
+    }
 }
