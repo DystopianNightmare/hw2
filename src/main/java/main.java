@@ -19,7 +19,8 @@ public class main {
         WindowImp windowImp = window.getWindowImp();
         Column main = new Column(new SimpleCompositor(window));
 
-        CommandHistory commandHistory = new CommandHistory();
+        CommandHistory commandHistory = CommandHistory.getInstance();
+
         window.setCommandHistory(commandHistory);
         KeyMap keyMap = new KeyMap();
         window.setKeyMap(keyMap);

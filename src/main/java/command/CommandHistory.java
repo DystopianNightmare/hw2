@@ -2,14 +2,21 @@ package command;
 
 import java.util.ArrayList;
 
-public class CommandHistory {
+public class CommandHistory  {
 
     private ArrayList<Command> list;
     private int index;
+    private static CommandHistory commandHistory = null;
 
-    public CommandHistory(){
+    private CommandHistory(){
         index=0;
         list = new ArrayList<Command>();
+    }
+    public static CommandHistory getInstance(){
+        if(commandHistory == null) {
+            commandHistory= new CommandHistory();
+        }
+        return commandHistory;
     }
 
     public void add(Command command, char c){
