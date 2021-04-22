@@ -11,16 +11,11 @@ import window.Window;
 public class main {
 
     public static void main(String[] args) throws NullChildException, NoChildOperationsException {
-//        SwingWindow swingWindow = new SwingWindow("TEST");
-
 
         Window window = new ApplicationWindow();
-//        Window window1 = new ApplicationWindow();
-        WindowImp windowImp = window.getWindowImp();
         Column main = new Column(new SimpleCompositor(window));
 
         CommandHistory commandHistory = CommandHistory.getInstance();
-
         window.setCommandHistory(commandHistory);
         KeyMap keyMap = new KeyMap();
         window.setKeyMap(keyMap);
@@ -42,10 +37,27 @@ public class main {
         WidgetFactory widgetFactory = WidgetFactory.getInstance();
         Label label = widgetFactory.getLabel(new SimpleCompositor(window),labelRow);
         Button button = widgetFactory.getButton(new SimpleCompositor(window), buttonRow);
-        button.setCommand(new IncrementCommand(window));
 
+        Row buttons = new Row(new SimpleCompositor(window));
+        Row buttonPlus = new Row(" + ",new SimpleCompositor(window));
+        Row buttonMinus = new Row(" - ",new SimpleCompositor(window));
+        Row button14 = new Row(" 14 ",new SimpleCompositor(window));
+        Row button20 = new Row(" 20 ",new SimpleCompositor(window));
 
+        Button buttonP = widgetFactory.getButton(new SimpleCompositor(window), buttonPlus);
+        Button buttonM = widgetFactory.getButton(new SimpleCompositor(window), buttonMinus);
+        Button button1 = widgetFactory.getButton(new SimpleCompositor(window), button14);
+        Button button2 = widgetFactory.getButton(new SimpleCompositor(window), button20);
 
+        buttonP.setCommand(new IncrementCommand(window));
+        buttonM.setCommand(new DecrementCommand(window));
+        button1.setCommand(new SetFontCommand(window,14));
+        button2.setCommand(new SetFontCommand(window,20));
+
+        buttons.insert(buttonP,0);
+        buttons.insert(buttonM,1);
+        buttons.insert(button1,2);
+        buttons.insert(button2,3);
 
         column.insert(new glyph.Character('X'),0);
         column.insert(label,1);
@@ -66,60 +78,10 @@ public class main {
         subMain.insert(topRow,0);
         subMain.insert(middleRow,1);
         subMain.insert(button,2);
+        subMain.insert(buttons,3);
         main.insert(subMain, 0);
 
         window.setRoot(main);
         window.setContents();
-//        window1.setRoot(main1);
-//        window1.setContents();
     }
 }
-
-
-
-
-//        main.insert(new glyph.Character('a'), 0);
-
-//        Column main = new Column(new SimpleCompositor(swingWindow));
-//        Column col = new Column(new SimpleCompositor(swingWindow));
-//        Row row1 = new Row("This is a",new SimpleCompositor(swingWindow));
-//        Row row2 = new Row("border demonstration.",new SimpleCompositor(swingWindow));
-//        Row row3 = new Row("scroller too!",new SimpleCompositor(swingWindow));
-//
-//        Column column1 = new Column(new SimpleCompositor(swingWindow));
-//        Row topRow = new Row(new SimpleCompositor(swingWindow));
-//        Row bottomRow = new Row(new SimpleCompositor(swingWindow));
-//
-//        glyph.Character Q = new glyph.Character('Q');
-//        glyph.Character R = new glyph.Character('R');
-//        glyph.Character T = new glyph.Character('T');
-//        bottomRow.insert(Q, 0);
-//        bottomRow.insert(R, 1);
-//        bottomRow.insert(T, 2);
-//
-//        WidgetFactory widgetFactory = WidgetFactory.getInstance();
-//        Label label = widgetFactory.getLabel(new SimpleCompositor(swingWindow),bottomRow);
-//        Button button = widgetFactory.getButton(new SimpleCompositor(swingWindow), topRow);
-//
-//        main.insert(label,0);
-//        main.insert(button,1);
-//
-//        glyph.Character a = new glyph.Character('a');
-//        topRow.insert(a, 0);
-//        Rectangle rectangle = new Rectangle(15,10);
-//        topRow.insert(rectangle,1);
-//        topRow.insert(column1,2);
-//
-//        col.insert(row1,0);
-//        col.insert(row2,1);
-//        col.insert(row3,2);
-//
-//        Embellishment border = new Border(3,new SimpleCompositor(swingWindow), col);
-//        Embellishment scrollbar = new Scrollbar(new SimpleCompositor(swingWindow),border);
-//        Embellishment border1 = new Border(3,new SimpleCompositor(swingWindow), scrollbar);
-//        Embellishment border2 = new Border(3,new SimpleCompositor(swingWindow), border1);
-//        topRow.insert(border2,3);
-//
-//        glyph.Character B = new Character('B');
-//        topRow.insert(B,4);
-
