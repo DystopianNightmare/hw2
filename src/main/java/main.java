@@ -7,7 +7,7 @@ import window.Window;
 
 public class main {
 
-    public static void main(String[] args) throws NullChildException, NoChildOperationsException {
+    public static void main(String[] args) throws  NoChildOperationsException {
 
         Window window = new ApplicationWindow();
         Column main = new Column(new SimpleCompositor(window));
