@@ -1,5 +1,7 @@
 package command;
-
+//implements command
+//implements prototype
+//implements chain of responsibility
 import java.util.ArrayList;
 
 public class CommandHistory  {
@@ -12,6 +14,7 @@ public class CommandHistory  {
         index=0;
         list = new ArrayList<Command>();
     }
+
     public static CommandHistory getInstance(){
         if(commandHistory == null) {
             commandHistory= new CommandHistory();
@@ -35,9 +38,7 @@ public class CommandHistory  {
     public int getIndex(){
         return index;
     }
-    public void setIndex(int index) {
-        this.index = index;
-    }
+    public void setIndex(int index) { this.index = index; }
     public int historyLength(){
         return list.size();
     }

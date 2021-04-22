@@ -1,6 +1,5 @@
 package command;
 
-import bridge.WindowImp;
 import window.Window;
 
 public class IncrementCommand extends Command{

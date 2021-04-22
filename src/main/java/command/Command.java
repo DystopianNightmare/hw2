@@ -1,6 +1,6 @@
 package command;
-
-import bridge.WindowImp;
+//implements command
+//implements prototype
 
 public abstract class Command implements Cloneable {
 

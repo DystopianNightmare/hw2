@@ -18,7 +18,6 @@ public abstract class Glyph {
     public abstract void draw(Window window);
 
     boolean intersects(Point point) {
-
         return false;
     }
 

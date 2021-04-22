@@ -1,7 +1,4 @@
-
-import bridge.WindowImp;
 import command.*;
-
 import factory.*;
 import glyph.*;
 import window.ApplicationWindow;
