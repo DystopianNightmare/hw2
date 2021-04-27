@@ -1,21 +1,7 @@
 
-X	java:S125o"<This block of commented-out lines of code should be removed.(ãµ±‰8ÏÍâ†/
-]	java:S125O"<This block of commented-out lines of code should be removed.(Ë”øçøÿÿÿÿ8ÏÍâ†/
-X	java:S125y"<This block of commented-out lines of code should be removed.(É»”8ÏÍâ†/
-]	java:S125b"<This block of commented-out lines of code should be removed.(ú˜Ğ—ûÿÿÿÿ8ÏÍâ†/
-X	java:S125G"<This block of commented-out lines of code should be removed.(ñ° Ö8ö•¾/
-]	java:S125Q"<This block of commented-out lines of code should be removed.(ÖÙâÊùÿÿÿÿ8ÏÍâ†/
-i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(·š†‡8‰¢ä®Š/
 H
-java:S1481 "+Remove this unused "border" local variable.(éÌ®î8í’¯Š/
-W	java:S125"<This block of commented-out lines of code should be removed.(ùè‰8á­Í¤/
-W	java:S125W"<This block of commented-out lines of code should be removed.(–‹áx8ÏÍâ†/
-]	java:S125"<This block of commented-out lines of code should be removed.(‹ÎÜ“ıÿÿÿÿ8‰¢ä®Š/
-X	java:S125["<This block of commented-out lines of code should be removed.(ÑôéŠ8ÏÍâ†/
-]	java:S125s"<This block of commented-out lines of code should be removed.(ÖÇ¿Àùÿÿÿÿ8ÏÍâ†/
+java:S1481"+Remove this unused "border" local variable.(éÌ®î8¶È··/
 i
-java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(ĞÓ®Ô8‰¢ä®Š/
-X	java:S125i"<This block of commented-out lines of code should be removed.(½ï®¡8ÏÍâ†/
-X	java:S125f"<This block of commented-out lines of code should be removed.(£Èí¦8ÏÍâ†/
-P
-java:S1481".Remove this unused "windowImp" local variable.(Å¬ıÁøÿÿÿÿ8Ó°³ì/
+java:S1223
+"LRename this method to prevent any misunderstanding or make it a constructor.(ùÊäÏ8–Ù¡¶/
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(·š†‡8‰¢ä®Š/

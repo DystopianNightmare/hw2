@@ -4,9 +4,9 @@ java:S1128	"3Remove this unused import 'glyph.SimpleCompositor'.(À¬àãıÿÿÿÿ8¦«Á
 G
 java:S1128
 "*Remove this unused import 'window.Window'.(àãÉè8ê»Æ²†/
-W
-java:S1161":Add the "@Override" annotation above this method signature(‹ÜÇá8¬ÿÔ³†/
 >
 java:S1116"Remove this empty statement.(ôŸìúÿÿÿÿ8øÛñ–†/
+W
+java:S1161":Add the "@Override" annotation above this method signature(‹ÜÇá8¬ÿÔ³†/
 \
 java:S1161":Add the "@Override" annotation above this method signature(°„õ•úÿÿÿÿ8òÓ°ß†/

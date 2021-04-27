@@ -1,7 +1,8 @@
 
-E
-java:S1128"*Remove this unused import 'window.Window'.(àãÉè8¥œ«Š/
 L
 java:S1128"/Remove this unused import 'bridge.SwingWindow'.(¢Ãò¹8¥œ«Š/
-H
-java:S1128"-Remove this unused import 'bridge.WindowImp'.(ÏÁ‹–8¥œ«Š/
+G
+java:S1128
+"*Remove this unused import 'window.Window'.(àãÉè8¥œ«Š/
+J
+java:S1128"-Remove this unused import 'bridge.WindowImp'.(ÏÁ‹–8¥œ«Š/

@@ -20,6 +20,7 @@ public class main {
         keyMap.put('d',new DecrementCommand(window));
         keyMap.put('r',new RedoCommand(window));
         keyMap.put('u',new UndoCommand(window));
+        keyMap.put('w',new WordCommand(window));
 
         Embellishment scrollbar = new Scrollbar(new SimpleCompositor(window),main);
         Embellishment border = new Border(5, new SimpleCompositor(window),scrollbar);
