@@ -2,6 +2,7 @@ package visitor;
 
 import glyph.Character;
 import glyph.Glyph;
+import glyph.Rectangle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +13,13 @@ public class WordVisitor extends GlyphVisitor {
     private List<String> list = new ArrayList<String>();
     private int index=0;
     private Glyph parent = null;
+    private boolean rectangleLast = false;
 
     public void visit(Character character){
+        if(rectangleLast){
+            tmp = "";
+            rectangleLast = false;
+        }
     if(character.getParent() == parent){
         if(character.getChar() == ' '){
             list.remove(tmp);
@@ -36,7 +42,9 @@ public class WordVisitor extends GlyphVisitor {
             stringBuilder.append(string + '\n');
         }
         return stringBuilder.toString();
-
         }
+    public void visit(Rectangle rectangle){
+        rectangleLast = true;
     }
-
+    }
+    

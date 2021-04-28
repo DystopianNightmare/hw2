@@ -73,7 +73,7 @@ public class main {
         bottomRow.insert(new glyph.Character('P'),0);
         bottomRow.insert(new glyph.Character('Q'),1);
 
-        Row words = new Row("Hello, here are some ",new SimpleCompositor(window));
+        Row words = new Row("Hello, here's some ",new SimpleCompositor(window));
         Row words2 = new Row("example words!",new SimpleCompositor(window));
 
 
