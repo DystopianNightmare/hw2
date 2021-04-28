@@ -1,4 +1,5 @@
 package glyph;
+import visitor.GlyphVisitor;
 import window.*;
 public class Row extends Composition {
 
@@ -33,5 +34,7 @@ public class Row extends Composition {
         getBounds().setWidth(bounds.getWidth());
 
     }
-
+    public void accept(GlyphVisitor v){
+        v.visit(this);
+    }
 }

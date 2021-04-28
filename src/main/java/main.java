@@ -37,10 +37,10 @@ public class main {
         Button button = widgetFactory.getButton(new SimpleCompositor(window), buttonRow);
 
         Row buttons = new Row(new SimpleCompositor(window));
-        Row buttonPlus = new Row(" + ",new SimpleCompositor(window));
-        Row buttonMinus = new Row(" - ",new SimpleCompositor(window));
-        Row button14 = new Row(" 14 ",new SimpleCompositor(window));
-        Row button20 = new Row(" 20 ",new SimpleCompositor(window));
+        Row buttonPlus = new Row("+",new SimpleCompositor(window));
+        Row buttonMinus = new Row("-",new SimpleCompositor(window));
+        Row button14 = new Row("14",new SimpleCompositor(window));
+        Row button20 = new Row("20",new SimpleCompositor(window));
 
         Button buttonP = widgetFactory.getButton(new SimpleCompositor(window), buttonPlus);
         Button buttonM = widgetFactory.getButton(new SimpleCompositor(window), buttonMinus);
@@ -73,10 +73,16 @@ public class main {
         bottomRow.insert(new glyph.Character('P'),0);
         bottomRow.insert(new glyph.Character('Q'),1);
 
+        Row words = new Row("Hello, here are some ",new SimpleCompositor(window));
+        Row words2 = new Row("example words!",new SimpleCompositor(window));
+
+
         subMain.insert(topRow,0);
         subMain.insert(middleRow,1);
         subMain.insert(button,2);
         subMain.insert(buttons,3);
+        subMain.insert(words,4);
+        subMain.insert(words2,5);
         main.insert(subMain, 0);
 
         window.setRoot(main);

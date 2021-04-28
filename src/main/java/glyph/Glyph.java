@@ -1,6 +1,9 @@
 package glyph;
 
 import command.Command;
+import iterator.Iterator;
+import iterator.NullIterator;
+import visitor.GlyphVisitor;
 import window.Window;
 import java.awt.*;
 
@@ -47,13 +50,20 @@ public abstract class Glyph {
 
     void setSize(Window window) {
     }
-    public String toString() {
-        return bounds.getPoint().x + " " + bounds.getPoint().y + " " + bounds.getHeight() + " " + bounds.getWidth();
-    }
+//    public String toString() {
+//        return bounds.getPoint().x + " " + bounds.getPoint().y + " " + bounds.getHeight() + " " + bounds.getWidth();
+//        return
+//    }
     public Command getCommand() { return command; }
     public void setCommand(Command command) { this.command = command; }
 
     public Glyph find(int i, int j) {
         return null;
     }
+
+    public Iterator<Glyph> createIterator(){
+        return new NullIterator<Glyph>();
+    }
+    //call accept method to analyze this glyph
+    public void accept(GlyphVisitor v){ }
 }

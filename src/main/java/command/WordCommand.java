@@ -1,5 +1,11 @@
 package command;
 
+import glyph.CompositeGlyph;
+import glyph.Glyph;
+import iterator.Iterator;
+import iterator.PreorderIterator;
+import visitor.GlyphVisitor;
+import visitor.WordVisitor;
 import window.Window;
 
 public class WordCommand extends Command {
@@ -12,8 +18,14 @@ public class WordCommand extends Command {
     }
 
     public void Execute() {
-        state = window.getWindowImp().getFontSize();
-        window.getWindowImp().setFontSize(window.getWindowImp().getFontSize()+1);
+        CompositeGlyph g = window.getRoot();
+        GlyphVisitor visitor = new WordVisitor();
+        Iterator<Glyph> i = new PreorderIterator<Glyph>(g);
+        for (i.first(); !i.isDone(); i.next()) {
+            Glyph current=i.currentItem();
+            current.accept(visitor);
+        }
+        System.out.println(visitor);
     }
     public int getState() { return state; }
 }

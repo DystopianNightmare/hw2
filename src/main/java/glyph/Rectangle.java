@@ -1,4 +1,5 @@
 package glyph;
+import visitor.GlyphVisitor;
 import window.*;
 import glyph.Glyph;
 
@@ -13,5 +14,8 @@ public class Rectangle extends Glyph {
     @Override
     public void draw(Window window) {
         window.drawRectangle(getBounds().getPoint().x, getBounds().getPoint().y, getBounds().getWidth(), getBounds().getHeight());
+    }
+    public void accept(GlyphVisitor v){
+        v.visit(this);
     }
 }

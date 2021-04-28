@@ -1,5 +1,9 @@
 package glyph;
 
+import iterator.ArrayListIterator;
+import iterator.Iterator;
+import iterator.PreorderIterator;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,23 +37,28 @@ public abstract class CompositeGlyph extends Glyph {
         }
         root.compose();
     }
+
     public List<Glyph> getChildren() {
         return children;
     }
 
-//    @Override
-    public Glyph find(int i, int j){
+    //    @Override
+    public Glyph find(int i, int j) {
         Glyph ret = null;
         for (int k = 0; k < children.size(); k++) {
             Glyph child = children.get(k);
-            if(child.getBounds().getPoint().x < i && i < child.getBounds().getPoint().x+child.getBounds().getWidth() && child.getBounds().getPoint().y < j && j < child.getBounds().getPoint().y+child.getBounds().getHeight()){
+            if (child.getBounds().getPoint().x < i && i < child.getBounds().getPoint().x + child.getBounds().getWidth() && child.getBounds().getPoint().y < j && j < child.getBounds().getPoint().y + child.getBounds().getHeight()) {
 //            if(child.getBounds().getPoint().x < i && i < child.getBounds().getPoint().x+child.getBounds().getWidth()){
-               if(child.getCommand() != null){
-                   return child;
-               }
+                if (child.getCommand() != null) {
+                    return child;
+                }
             }
-            ret = child.find(i,j);
+            ret = child.find(i, j);
         }
         return ret;
+    }
+
+    public Iterator<Glyph> createIterator() {
+        return new ArrayListIterator(children);
     }
 }

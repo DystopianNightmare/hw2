@@ -1,4 +1,5 @@
 package glyph;
+import visitor.GlyphVisitor;
 import window.*;
 public class Column extends Composition {
 
@@ -32,5 +33,8 @@ public class Column extends Composition {
     public void adjustParent(Bounds bounds){
         getBounds().setHeight(bounds.getHeight());
         getBounds().setWidth(bounds.getWidth());
+    }
+    public void accept(GlyphVisitor v){
+        v.visit(this);
     }
 }
